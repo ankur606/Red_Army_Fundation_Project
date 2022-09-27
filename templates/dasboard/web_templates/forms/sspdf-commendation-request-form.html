@@ -1,0 +1,577 @@
+{% load static  %}
+{% include 'dasboard/web_templates/header.html' %}
+
+
+
+
+
+<!--==================================
+=         employment information    =
+===================================-->
+
+
+
+<section class="personal-information-main-area">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="form-information-heading-area">
+       <h2>SSPDF COMMENDATION REQUEST FORM</h2>
+       <p>This form is limited to “ORGANIZED RED ARMY” as dictated by the Constitution of the Red Army Foundation. Organized Red Army, according to the constitution and membership classification, refers to those Red Army who were formally organized under Military (e.g., Bilpam, Bonga, Lotuke, Moli, Panda Oyee, Moroto), Refugee (e.g., Pinyudu, Dimma, Tharpam, Kakuma, Adjumani), IDP (e.g., Polotaka, Narus, Natinga, Moli, Lobone, Aswa), and Diaspora (e.g., Cuba) camps during the SPLM/A Liberation Struggle for freedom.</p>	
+      </div>
+    </div>
+ 
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>SSPDF COMMENDATION REQUEST FORM</h2>	
+      </div>	
+      <form class="personal-information-input-area" method="post" enctype="multipart/form-data" > 
+        {% csrf_token %}
+       <div class="row"> 
+         <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Upload Your Photos</label>
+           <div class="input-icon">
+            <div class="show-upload-img-area">
+             <img src= " {% static 'images/demo-img.png' %} " alt="">
+            </div> 
+            <input type="text" class="upload-frm-size file-upload-text" disabled="" placeholder="select a file...">
+             <span class="input-group-btn">
+              <button type="button" class="upload-btn file-upload-btn">
+                UPLOAD PHOTO
+                <input type="file" class="file-upload" name="image">
+              </button>
+            </span>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Camp (Markaz)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Camp (Markaz)" name="camp" class="frm-size" >
+          </div>
+         </div>  
+        </div> 
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Division(Liwa)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Division (Liwa)" name="division" class="frm-size" >
+          </div>
+         </div>  
+        </div> 
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Battalion (Katiba)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Battalion (Katiba)" name="battalion" class="frm-size" >
+          </div>
+         </div>  
+        </div>  
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Company (Siria)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Company (Siria)" name="company" class="frm-size" >
+          </div>
+         </div>  
+        </div> 
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Platoon (Fasila)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Platoon (Fasila)" name="platoon" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Squad (Jamaa)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Squad (Jamaa)" name="squad" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Conscription Year</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Conscription Year" name="conscription_year" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Current Rank (Rutba)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Current Rank (Rutba)" name="current_rank" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Were You Ever Engaged On The Battlefield?</label> 
+           {{forms_data.ever_engaged}}
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If The Answer Is Yes, List All The Military Operations You Were Engaged In And When, And Provide Names Of Your Living Overall And Line Commanders With You During Those Offensives.</label>
+          <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="military_operations" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If You Did Not Engage In Any Battle Of The Splm/a During The War, Please Explain Why.</label>
+          <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="any_battle" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If You Were On A Special Mission, E.g., Cuba Or Lost Boys And Girls Program Or Other Assignments, Provide Details Of The Unique Mission And What You And Your Group Accomplished During Your Mission That Contributed To The Such Of The Splm/a Liberation Struggle.</label>
+          <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="special_misssion" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Upon Leaving Your Original Military, Refugee, And Idp Camp, Are There Other Splm/a Divisions, Battalions, Units, Special Operations, Or Foreign Missions You Joined?</label> 
+          {{forms_data.original_military}}
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If The Answer Is Yes, List All The Military, Refugee, And Idp Camps You Joined Afterward, Including Other Splm/a Divisions, Battalions, Units, And Special Operations Or Foreign Missions.</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="special_operations" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Have You Ever Served Under The Civil Administration Of The New Sudan (Cans)?</label> 
+          {{forms_data.civil_administratio}}
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If the answer is YES, list all your job titles and locations you worked.</label>
+           <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="job_titles_and_locations" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>During Your Service In The Red Army, Is There Any Exceptional Or Heroic Act Or Service You Performed That Deserves Recognition With Rank Or Medal?</label> 
+          {{forms_data.rank_or_medal}}
+          
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If The Answer Is Yes, Provided Details Of Such Heroic Act Or Service.</label>
+           <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="heroic_act_or_service" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+       </div>  
+   
+      </div>
+    </div>
+ 
+    <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="armed-forces-service-information">
+     <h2>ARMED FORCES SERVICE INFORMATION</h2>
+     <p>This form is limited to “ORGANIZED RED ARMY” as dictated by the Constitution of the Red Army Foundation. Organized Red Army, according to the constitution and membership classification, refers to those Red Army who were formally organized under Military (e.g., Bilpam, Bonga, Lotuke, Moli, Panda Oyee, Moroto), Refugee (e.g., Pinyudu, Dimma, Tharpam, Kakuma, Adjumani), IDP (e.g., Polotaka, Narus, Natinga, Moli, Lobone, Aswa), and Diaspora (e.g., Cuba) camps during the SPLM/A Liberation Struggle for freedom.</p> 
+    </div> 
+     <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>ARMED FORCES SERVICE INFORMATION FORM</h2>  
+      </div> 
+      
+       <div class="row"> 
+         <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Are You In Armed Forces Active Service?</label> 
+          {{forms_data.forces_active_service}}
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If Yes, Please Select The Branch Of The Armed Forces You Belong To And Your Current Duty Station.</label> 
+          {{forms_data.defence_forces}}
+          <div class="main-sub-input-box">
+          <label>Branch or Unit</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Branch or Unit" name="current_duty_station" class="frm-size" >
+          </div>
+         </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+        {{forms_data.police_services}}
+          <div class="main-sub-input-box">
+          <label>Branch or Unit</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Branch or Unit" name="national_police_service" class="frm-size" >
+          </div>
+         </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+           {{forms_data.wildlife_service}}
+          <div class="main-sub-input-box">
+          <label>Branch or Unit</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Branch or Unit" name="national_wildlife_service" class="frm-size" >
+          </div>
+         </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          {{forms_data.prison_service}}
+          <div class="main-sub-input-box">
+          <label>Branch or Unit</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Branch or Unit" name="national_prison_service" class="frm-size" >
+          </div>
+         </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+         {{forms_data.civil_service}}
+          <div class="main-sub-input-box">
+          <label>Branch or Unit</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Branch or Unit" name="civil_defence_service" class="frm-size" >
+          </div>
+         </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          {{forms_data.security_service}}
+          <div class="main-sub-input-box">
+          <label>Branch or Unit</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Branch or Unit" name="national_security_service" class="frm-size" >
+          </div>
+         </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>What Is Your Current Rank?</label>
+           <div class="input-icon">
+           <input type="text" placeholder="What Is Your Current Rank?" name="current_rank" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Do You Have Any Assignments?</label> 
+          {{forms_data.any_assignments}}
+          
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If The Answer Is Yes, What Is Your Current Assignment?</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="current_assignment" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If The Answer Is No, Do You Want The Foundation To Speak On Your Behalf To Your Superior About You Getting An Assignment?</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="getting_an_assignment" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Do You Need Any Assistance With The Rank Adjustment?</label> 
+          {{forms_data.rank_adjustment}}
+          
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If Yes, Please Explain The Nature Of Your Complaint And The Kind Of Assistance You Need From The Red Army Foundation.</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="kind_of_assistance" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>During Your Service In The Armed Forces, Is There Any Exceptional Or Heroic Act Or Service You Performed That Deserves Recognition With Rank Or Medal?</label> 
+          {{forms_data.recognition_rank_or_medal}}
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If The Answer Is Yes, Provided Details Of Such Heroic Act Or Service.</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="such_heroic_act_or_service" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+       </div>  
+     
+     </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+     <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>MEMBER DECLARATION FORM</h2>  
+      </div>   
+
+       <div class="row"> 
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+           <label>Declaration</label>
+          
+           {{forms_data.declaration}}
+          
+          
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Write Your Full Name, Date, And Location To Sign Electronically.</label> 
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box-sub-heading">
+          <label>Full Name</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Full Name" name="full_name" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box-sub-heading">
+          <label>Date</label>
+           <div class="input-icon">
+            <input type="date" placeholder="" name="date" class="frm-size-date" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box-sub-heading">
+          <label>Location</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Location" name="location" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+       </div>  
+     
+     </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+     <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>MEMBERSHIP DETERMINATION FORM</h2> 
+      </div>   
+   
+       <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Membership Determination</label>   
+          
+          {{forms_data.membership_determination}}
+         </div>  
+        </div> 
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If Rejected, Provided Reasons For Rejection.</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="reasons_for_rejection" placeholder="Please Explain"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Membership Number</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Membership Number" name="membership_number" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Membership Classification</label> 
+          {{forms_data.membership_classification}}
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Membership Registration Fee Paid?</label> 
+          
+          {{forms_data.registration_fee_paid}}
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Annual Subscription Dues Paid.</label> 
+          <div class="employment-information-check-box">
+            {{forms_data.subscription_dues_paid}}
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Any Contribution</label> 
+          {{forms_data.any_contribution}}
+          
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Any Donation</label> 
+          {{forms_data.any_donation}}
+         
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Official Waiver</label> 
+          {{forms_data.official_waiver}}
+          
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Notes</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="notes" placeholder="Notes"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Date of Application</label>
+           <div class="input-icon">
+            <input type="date" placeholder="Name of School" name="date_of_application" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Date of Certification</label>
+           <div class="input-icon">
+            <input type="date" placeholder="Name of School" name="date_of_certification" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>To Officially Authorize The Certification Of A Member, Write Your Full Name, Date, And Locationto Sign Electronically.</label> 
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box-sub-heading">
+          <label>Full Name</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Full Name" name="membership_full_name" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+         <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box-sub-heading">
+          <label>Date</label>
+           <div class="input-icon">
+            <input type="date" placeholder="" name="membership_date" class="frm-size-date" >
+          </div>
+         </div>  
+        </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box-sub-heading">
+          <label>Location</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Location" name="membership_member_location" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="form-submit-btn-area">
+          <button type="submit" class="form-submit-btn">SUBMIT</button>
+         </div>
+        </div>
+       </div>  
+      </form>  
+     </div>
+    </div>
+   </div>	
+  </div>		
+ </section>
+ 
+<!--==================================
+=       employment information    =
+===================================-->
+
+
+
+
+
+
+
+
+
+  <!-- To Top -->
+  <div class="scroll-top-to">
+    <i class="ti-angle-up"></i>
+  </div>
+  
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  
+  <script src="js/script.js"></script>
+
+<script type="text/javascript">
+ function initializeFileUploads() {
+    $('.file-upload').change(function () {
+        var file = $(this).val();
+        $(this).closest('.input-icon').find('.file-upload-text').val(file);
+    });
+    $('.file-upload-btn').click(function () {
+        $(this).find('.file-upload').trigger('click');
+    });
+    $('.file-upload').click(function (e) {
+        e.stopPropagation();
+    });
+}
+
+
+// On document load:
+$(function() {
+    initializeFileUploads();
+});	
+</script>
+
+
+{% include 'dasboard/web_templates/footer.html' %}
+ 

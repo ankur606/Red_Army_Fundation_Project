@@ -1,0 +1,42 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+
+<div class="container">
+    <form action="" method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+      <h3 class="sb" >Add New Team Members :</h3> 
+      <hr> 
+      <div class="row">
+        <div class="col-25">
+        <b> <label for="name">Name:</label></b>
+        </div>
+        <div class="col-4">
+          <input type="text" id="name"    name="name" placeholder="Enter Team Members Name">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-4">
+         <b> <label for="subject">Designation:</label></b>
+          <input type="text" name="designation" id="designation", placeholder="Enter Team Members Designation">
+        </div>
+        <div class="row">
+            <div class="col-25">
+            <b>  <label for="fname">Team Memebers Image:</label></b>
+            </div>
+            <div class="col-75">
+              <input type="file" id="team_id"  name="members_image">
+            </div>
+          </div>
+      </div>
+      <br>  
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+    <br>
+   
+{% endblock content %}

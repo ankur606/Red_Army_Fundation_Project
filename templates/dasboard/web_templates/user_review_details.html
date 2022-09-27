@@ -1,0 +1,68 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Only Super  User <a href="{% url 'event' %}" class="btn btn-success btn-sm" style="margin-left: 22px;">Add New Event</a>
+        
+      {% for message in messages %}
+      <b style="color:#208817; margin-left: 22px;">{{message}}</b>
+      {% endfor %} <br>
+        </h4>
+        
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+             <tr>
+                <th>Sr No</th>
+                <th>Event Headding</th>
+              
+                <th> Event Description </th>
+                <th>Event Date</th>
+
+                <th>Action</th>
+
+              </tr> 
+            </thead>
+            <tbody>
+              {% for data in data %}
+              <tr>
+                <td>
+                 <a href=""  > {{forloop.counter}}</a>
+                </td>
+                <td>
+                  {{data.headding}}
+                </td>
+              
+                <td>
+                  {{data.description|slice:":10"}} ...
+                 </td>
+       
+        
+                 <td>
+                   12/06/2022
+                 </td>
+             
+                <td>
+                   <a href="{% url 'eventEdit' data.id %}", class="btn btn-outline-success btn-sm">Edit Event</a>
+                  <a href="{% url 'eventDelete' data.id %}" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are You Sure')">Event Delete</a>
+                </td>
+              </tr>
+              
+               {% endfor %} 
+            </tbody>
+            
+          </table>
+        
+        </div>
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

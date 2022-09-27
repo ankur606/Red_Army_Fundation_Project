@@ -1,0 +1,585 @@
+{% load static  %}
+{% include 'dasboard/web_templates/header.html' %}
+
+
+
+
+<section class="personal-information-main-area">
+ <div class="container">
+  <div class="row">
+   <div class="col-lg-12 col-md-12 col-sm-12">
+   	<div class="form-information-heading-area">
+   	 <h2>EDUCATION INFORMATION</h2>
+   	 <p>To ensure the strategic positioning of our members in public and private sectors, the Foundation will actively look for employment opportunities with partners and the government and match them with membership profiles on the database to see who fits the available job and thereby lobby on behalf of the member.</p>	
+
+   	 <p>The Red Army Foundation is collecting this academic and professional qualification to understand how to match your skills with opportunities available with partners in the public and private sectors. Skip part (s) that don’t apply.</p>
+   	</div>
+   </div>
+   <form class="personal-information-input-area" method="post" , enctype="multipart/form-data"> 
+    {% csrf_token %}
+   <div class="col-lg-12 col-md-12 col-sm-12">
+   	<div class="personal-information-form-area">
+     <div class="personal-information-form-heading">
+      <h2>PRIMARY EDUCATION INFORMATION FORM</h2>	
+     </div>		
+   	
+   	  <div class="row">	
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Name of School</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Name of School" name="primary_school_name" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Country of Study</label>
+          <div class="input-icon">
+   
+          <input type="text" placeholder="Name of School" name="primary_country_study_name" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Commencement</label>
+          <div class="input-icon">
+      
+          <input type="text" placeholder="Name of School" name="primary_year_of_commencement" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Completion</label>
+          <div class="input-icon">
+       
+          <input type="text" placeholder="Name of School" name="primary_year_of_completion" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Certification Attained</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Certification Attained" name="primary_certification_attained" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	  </div> 	
+   	 	
+   	</div> 
+ </div> <div class="col-lg-12 col-md-12 col-sm-12">
+   	<div class="personal-information-form-area">
+     <div class="personal-information-form-heading">
+      <h2>SECONDARY EDUCATION INFORMATION FORM</h2>	
+     </div>		
+   	
+   	  <div class="row">	
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Name of School</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Name of School" name="secondary_name_school" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Country of Study</label>
+          <div class="input-icon">
+       
+          <input type="text" placeholder="Name of School" name="secondary_country_of_study" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Commencement</label>
+          <div class="input-icon">
+   
+          <input type="text" placeholder="Name of School" name="secondary_year_of_commencement" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Completion</label>
+          <div class="input-icon">
+     
+          <input type="text" placeholder="Name of School" name="secondary_year_of_completion" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Certification Attained</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Certification Attained" name="secondry_certification_attained" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	  </div> 	
+   	 
+   	</div>
+   </div>	 
+   <div class="col-lg-12 col-md-12 col-sm-12">
+   	<div class="personal-information-form-area">
+     <div class="personal-information-form-heading">
+      <h2>DIPLOMA EDUCATION INFORMATION FORM</h2>	
+     </div>		
+   
+   	  <div class="row">	
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Name of School</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Name of School" name="diploma_school_name" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Country of Study</label>
+          <div class="input-icon">
+    
+          <input type="text" placeholder="Name of School" name="diploma_country_of_study" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Commencement</label>
+          <div class="input-icon">
+       
+          <input type="text" placeholder="Name of School" name="diploma_year_of_commencement" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Completion</label>
+          <div class="input-icon">
+         
+          <input type="text" placeholder="Name of School" name="diploma_year_of_completion" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Certification Attained</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Certification Attained" name="diploma_certification_attained" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	  </div> 	
+   	 	
+   	</div>
+   </div> 
+
+  <div class="col-lg-12 col-md-12 col-sm-12">
+   	<div class="personal-information-form-area">
+     <div class="personal-information-form-heading">
+      <h2>ASSOCIATE DEGREE EDUCATION INFORMATION FORM</h2>	
+     </div>		
+  
+   	  <div class="row">	
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Name of School</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Name of School" name="associate_school_name" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Country of Study</label>
+          <div class="input-icon">
+          
+          <input type="text" placeholder="Name of School" name="associate_country_of_study" class="frm-size" >
+            
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Commencement</label>
+          <div class="input-icon">
+        
+          <input type="text" placeholder="Name of School" name="associate_year_of_commencement" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Completion</label>
+          <div class="input-icon">
+          
+          <input type="text" placeholder="Name of School" name="associate_year_of_completion" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Certification Attained</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Certification Attained" name="associate_certification_attained" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	  </div> 	
+  	
+   	</div>
+
+   </div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+   	<div class="personal-information-form-area">
+     <div class="personal-information-form-heading">
+      <h2>BACHELOR’S DEGREE EDUCATION INFORMATION FORM</h2>	
+     </div>		
+   
+   	  <div class="row">	
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Name of School</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Name of School" name="bachelor_school_name" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Country of Study</label>
+          <div class="input-icon">
+          
+          <input type="text" placeholder="Name of School" name="bachelor_country_of_name" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Commencement</label>
+          <div class="input-icon">
+          
+          <input type="text" placeholder="Name of School" name="bachelor_year_of_commencement" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Completion</label>
+          <div class="input-icon">
+          
+          <input type="text" placeholder="Name of School" name="bachelor_year_of_completion" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Certification Attained</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Certification Attained" name="bachelor_certification_attained" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	  </div> 	
+   	 
+   	</div>
+   </div>  
+  <div class="col-lg-12 col-md-12 col-sm-12">
+   	<div class="personal-information-form-area">
+     <div class="personal-information-form-heading">
+      <h2>MASTER’S DEGREE EDUCATION INFORMATION FORM</h2>	
+     </div>		
+
+   	  <div class="row">	
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Name of School</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Name of School" name="master_school_name" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Country of Study</label>
+          <div class="input-icon">
+          
+          <input type="text" placeholder="Name of School" name="master_country_name" class="frm-size" >
+          
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Commencement</label>
+          <div class="input-icon">
+          
+          <input type="text" placeholder="Name of School" name="master_year_of_commencement" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Completion</label>
+          <div class="input-icon">
+           
+          <input type="text" placeholder="Name of School" name="master_year_of_completion" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Certification Attained</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Certification Attained" name="master_certification_attained" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+   	  </div> 	
+   	 	
+   	</div>
+   </div> 
+   <div class="col-lg-12 col-md-12 col-sm-12">
+   	<div class="personal-information-form-area">
+     <div class="personal-information-form-heading">
+      <h2>PHILOSOPHY DOCTOR EDUCATION INFORMATION FORM</h2>	
+     </div>		
+  
+   	  <div class="row">	
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Name of School</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Name of School" name="philosohy_school_name" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <div class="main-input-box">
+          <label>Country of Study</label>
+           <div class="input-icon">
+            
+           <input type="text" placeholder="Name of School" name="philosohy_ountry_of_study" class="frm-size" >
+
+          </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Commencement</label>
+          <div class="input-icon">
+          
+          <input type="text" placeholder="Name of School" name="philosohy_year_of_commencement" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-6 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Year of Completion</label>
+          <div class="input-icon">
+           
+          <input type="text" placeholder="Name of School" name="philosohy_year_of_completion" class="frm-size" >
+
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Certification Attained</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Certification Attained" name="philosohy_certification_attained" class="frm-size" >
+         </div>
+        </div>	
+   	   </div>
+     <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Self Taught</label>
+         <div class="main-sub-heading-area">
+         	<label>Please Describe Your Self Taught Trade</label>
+         </div>
+          <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="self_taught" placeholder="Please Describe Your Self Taught Trade"></textarea>
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Special Skills</label>
+         <div class="main-sub-heading-area">
+         	<label>Please Describe Your Special Skills Or Talents</label>
+         </div>
+          <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="special_skilss" placeholder="Please Describe Your Special Skills Or Talents"></textarea>
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Occupation</label>
+         <div class="main-sub-heading-area">
+         	<label>Please Describe Your Field Of Specialization In Detail</label>
+         </div>
+          <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="specialization_indetail" placeholder="Please Describe Your Field Of Specialization In Detail"></textarea>
+         </div>
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>Additional Academic and Professional Certificates</label>
+          <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="professional_certificates" placeholder="Additional Academic and Professional Certificates"></textarea>
+         </div>
+        </div>	
+   	   </div> 
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	   	<div class="form-submit-btn-area">
+   	   	 <button class="form-submit-btn" type="submit" > SUBMIT	</button>
+   	   	</div>
+   	   </div>
+   	  </div> 	
+   	 </form>	
+   	</div>
+   </div>
+  </div>	
+ </div>		
+</section>
+
+<!--==================================
+=         education information     =
+===================================-->
+
+
+
+
+
+
+
+<!--============================
+=            Footer            =
+=============================-->
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-12 m-md-auto align-self-center">
+          <div class="block footer-logo">
+            <a href="#!"><img src="images/bannerImg2.png" alt="footer-logo"></a>
+            <ul class="social-icon list-inline">
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-pinterest-alt"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
+          <div class="block-2">
+            <h6>Product</h6>
+            <ul>
+              <li><a href="#!">Teams & Conditions</a></li>
+              <li><a href="#!">Privacy Policy</a></li>
+              <li><a href="#!">Cookie Policy</a></li>
+              <li><a href="#!">Legal Desclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-3 col-6 mt-5 mt-lg-0">
+          <div class="block-2">           
+
+            <div class="single">
+				<h2>Subscribe to our Newsletter</h2>
+				<p>Subscribe to stay in the loop with our Programs updates and events</p>
+			<div class="input-group">
+		     <input type="email" class="form-control" placeholder="Enter your email">
+		     <span class="input-group-btn">
+		     <button class="btn btn-theme" type="submit">Subscribe</button>
+		     </span>
+		      </div>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center bottomFooter py-3">
+    <Ahmar class="text-secondary">Copyright &copy; Designed &amp; Developed by <a href="#!">Webnmobapps Solutions</a></Ahmar class="text-secondary">
+  </div>
+</footer>
+
+
+  <!-- To Top -->
+  <div class="scroll-top-to">
+    <i class="ti-angle-up"></i>
+  </div>
+  
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  
+  <script src="js/script.js"></script>
+
+<script type="text/javascript">
+ function initializeFileUploads() {
+    $('.file-upload').change(function () {
+        var file = $(this).val();
+        $(this).closest('.input-icon').find('.file-upload-text').val(file);
+    });
+    $('.file-upload-btn').click(function () {
+        $(this).find('.file-upload').trigger('click');
+    });
+    $('.file-upload').click(function (e) {
+        e.stopPropagation();
+    });
+}
+
+
+// On document load:
+$(function() {
+    initializeFileUploads();
+});	
+</script>
+
+
+</body>
+
+</html>

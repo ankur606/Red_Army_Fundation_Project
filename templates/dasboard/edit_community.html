@@ -1,0 +1,52 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+
+{% for data in data %}
+<div class="container">
+    <form action="" method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <h4 style="color: darkcyan;"> Edit Discussions Community  Id : {{data.id}}</h4>
+        <hr>
+      <div class="row">
+        <div class="col-25">
+      
+        </div>
+        <img src="{{data.image.url}}" style="height: 15ch;  width: 8cm; border-color:black; border: 1in; "  alt="">
+        <br>
+        <div class="col-75">
+          <b> <label for="fname"> Add New Community Image:</label></b>
+        <b>  <input type="file" id="fname" name="community_image"  ></b>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+         <b> <label for="fname"> Community Headings:</label></b>
+        </div>
+        <div class="col-75">
+        <b>  <input type="text" id="community_headings" name="community_headings" value="{{data.headdings}}" ></b>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+        <b> <label for="subject">Community Discussions Description:</label></b>
+        </div>
+        <div class="col-75">
+          <textarea id="description" name="description"  style="height:200px">{{data.topic_description}}</textarea>
+        </div>
+      </div>
+      
+      <div class="row" >
+       <button class="btn btn-primary " >Update</button>
+      </div>
+    </form>
+    <br>
+    <div>
+      <a href="{% url 'communityDiscussionsDetails' %}">  <button class="btn btn-primary " >Show All Community Discussions</button></a>
+      </div>
+  </div>
+  {% endfor %}
+{% endblock content %}

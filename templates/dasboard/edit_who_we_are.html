@@ -1,0 +1,32 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+  <title>{% block title %} Edit Who We Are {% endblock title %} </title>
+      {% block content %}
+       <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"> Edit Who We Are</h4>
+                  <p class="card-description">
+                   Edit
+                  </p>
+                  <form class="forms-sample" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for message in messages %}
+                    <b style="color:#03e9f4" >{{message}}</b>
+                    {% endfor %} <br>
+                  
+                    
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Who We Are</label>
+                        <textarea  class="form-control" id="exampleInputEmail1" required placeholder="Who We Are" name="who" >{{about.who_we_are}}</textarea>
+                      </div>
+                                   
+                    <button type="submit" class="btn btn-primary mr-2">Edit Now</button>
+                    
+                      
+                      
+                  </div>
+                  </form>
+                </div>
+              </div>
+       {% endblock content %}

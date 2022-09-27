@@ -1,0 +1,62 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+{% for data in data %}
+<div class="container">
+  <h4>Event Update Page</h4>
+  <hr>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+      <div class="row">
+        <div class="col-25">
+          <div>
+            <img src="{{ data.image.url }}" style="height: 2in; width: 6cm;" alt="">
+          </div>
+          <label for="fname">Add New Image:</label>
+          <br>
+
+
+        </div>
+        <br>
+        <div class="col-75">
+          <input type="file" id="event_image"  name="event_image" placeholder="event image" >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Headding:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="headding"   name="headding" placeholder="Enter Events Headdings", value="{{data.headding}}">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Description:</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="description"  placeholder="Write something.." style="height:200px"  >{{data.description}}</textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Event Locations:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="location"   name="location" placeholder="Enter Events location" value="{{data.location}}" >
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+    <br>
+    <div class="row">
+        <input type="button" value="Add New Events">
+      </div>
+  </div>
+  {% endfor %}
+{% endblock content %}

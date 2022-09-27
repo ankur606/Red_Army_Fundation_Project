@@ -1,0 +1,303 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+          {% for data in data %}
+        <h4 class="card-title">Education Information Forms Recoard Details </h4>
+        {% endfor %}
+        <hr>
+        <br>
+        
+        <h6><a href="" download> Download Forms </a></h6>
+        {% for data in data %}
+        <table  class="table-dark">
+          <td><h4>Primary School Educations Details </h4></td>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Primary School Name:</td>
+           <td class="table-light" style="width: 600px;" >{{data.primary_school_name}}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Primary Country Study Name:</td>
+           <td class="table-light" >{{data.primary_country_study_name}}</td>
+           
+          </tr>
+           
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Primary Year Of Commencement:</td>
+           <td class="table-light" >{{data.primary_year_of_commencement}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Primary Year Of Completion</td>
+           <td class="table-light" >{{data.primary_year_of_completion}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Primary Certification Attained:</td>
+           <td class="table-light" >{{data.primary_certification_attained}}</td>
+           
+          </tr>
+          <td><h4>Secondary Educations Informations Details </h4></td>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Secondary Name Of School:</td>
+           <td class="table-light" >{{data.secondary_name_of_school}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Secondary  Country Of Study:</td>
+           <td class="table-light" >{{data.secondary_country_of_study}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Secondary Year Of Commencement:</td>
+           <td class="table-light" >{{data.secondary_year_of_commencement}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Secondary Year Of Completion:</td>
+           <td class="table-light" >{{data.secondary_year_of_completion}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Secondary Certification Attained:</td>
+           <td class="table-light" >{{data.secondary_certification_attained}}</td>
+           
+          </tr>
+          <td><h4>Diploma Educations Information Details </h4></td>
+           
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Diploma Name Of School:</td>
+           <td class="table-light" >{{data.diploma_name_of_school}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Diploma Country Of Study:</td>
+           <td class="table-light" >{{data.diploma_country_of_study}}</td>
+           
+          </tr>
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Diploma Year Of Commencement:</td>
+           <td class="table-light" >{{data.diploma_year_of_commencement}}</td>
+           
+          </tr>
+           
+          
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Diploma Year Of Completion:</td>
+           <td class="table-light" >{{data.diploma_year_of_completion}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Diploma Certification Attained:</td>
+           <td class="table-light" >{{data.diploma_certification_attained}}</td>
+           
+          </tr>
+           <td><h4>Associate Degree Educations Information Details</h4></td>
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Associate Name Of School:</td>
+           <td class="table-light" >{{data.associate_name_of_school}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Associate Country Of Study:</td>
+           <td class="table-light" >{{data.associate_country_of_study}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Associate Year Of Commencement:</td>
+           <td class="table-light" >{{data.associate_year_of_commencement}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Associate Year Of Completion :</td>
+           <td class="table-light" >{{data.associate_year_of_completion }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Associate Certification Attained:</td>
+           <td class="table-light" >{{data.associate_certification_attained}}</td>
+           
+          </tr>
+           <td><h4> Bachelor Degree educations Information Details</h4></td>
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Bachelor Name Of School:</td>
+           <td class="table-light" >{{data.bachelor_name_of_school }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Bachelor Country Of Study :</td>
+           <td class="table-light" >{{data.bachelor_country_of_study }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Bachelor Year Of Commencement:</td>
+           <td class="table-light" >{{data.bachelor_year_of_commencement}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Bachelor Year Of Completion:</td>
+           <td class="table-light" >{{data.bachelor_year_of_completion}}</td>
+           
+          </tr>
+           
+            
+   
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Bachelor Certification Attained:</td>
+           <td class="table-light" >{{data.bachelor_certification_attained}}</td>
+           
+          </tr>
+           <td><h4>Master Degree Information Details</h4></td>
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Master Name Of School:</td>
+           <td class="table-light" >{{data.master_name_of_school}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Master Country Of Study:</td>
+           <td class="table-light" >{{data.master_country_of_study}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Master Year Of Commencement:</td>
+           <td class="table-light" >{{data.master_year_of_commencement}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Master Year Of Completion:</td>
+           <td class="table-light" >{{data.master_year_of_completion}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Master Certification Attained:</td>
+           <td class="table-light" >{{data.master_certification_attained}}</td>
+           
+          </tr>
+           <td><h4>Philosophy Doctor Education Information details</h4></td>
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Philosohy Name Of School :</td>
+           <td class="table-light" >{{data.philosohy_name_of_school }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Philosohy Country Of Study:</td>
+           <td class="table-light" >{{data.philosohy_country_of_study}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Philosohy Year Of Commencement:</td>
+           <td class="table-light" >{{data.philosohy_year_of_commencement}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Philosohy Year Of Completion:</td>
+           <td class="table-light" >{{data.philosohy_year_of_completion }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Philosohy Certification Attained</td>
+           <td class="table-light" >{{data.philosohy_certification_attained}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >  Describe Your Thaughts:</td>
+           <td class="table-light" >{{data.describe_your_thaughts}}</td>
+           
+          </tr>
+           
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Describe Special Skills:</td>
+           <td class="table-light" >{{data.describe_special_skills}}</td>
+    
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Describe Specialization Indetail:</td>
+           <td class="table-light" >{{data.describe_specialization_indetail}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Describe Professional Certificates:</td>
+           <td class="table-light" >{{data.describe_professional_certificates}}</td>
+           
+          </tr>
+           
+         
+       
+        </table>
+        
+        {% endfor %}
+         
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

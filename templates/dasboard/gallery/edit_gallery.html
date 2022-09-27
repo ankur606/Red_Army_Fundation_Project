@@ -1,0 +1,87 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+  <title>{% block title %} Gallery Edit {% endblock title %} </title>
+      {% block content %}
+      <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Post</h4>
+                  <p class="card-description">
+                    Post Gallery
+                  </p>
+                  <form class="forms-sample" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for message in messages %}
+                    <b style="color:#03e9f4" >{{message}}</b>
+                    {% endfor %} <br>
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">Post Title</label>
+                      <input type="text" class="form-control" id="exampleInputUsername1" required placeholder="Post Title" name="title" value="{{edit.post_title}}">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Description</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" required placeholder="Description" name="description" value="{{edit.description}}">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Image</label><br>
+                      <input type="file"  class="btn btn-outline-danger btn-icon-text" required id="exampleInputPassword1" name="img" onchange="uploadImages(this.id)"> 
+                      <label class="variant_image_error_msg" id="variant_image_error_msg" style="color: red; font-size: 11px; margin-left:10px"></label>                                         
+                    </div>                  
+                    <button type="submit" class="btn btn-primary mr-2">Post</button>
+                    
+                  </form>
+                </div>
+              </div>
+              <script>
+              function uploadImages(id)
+              {
+
+$('.secondary_images').html('');
+$('#primaryImage').removeAttr('src').removeAttr('style');
+
+for (var i = 0; i < $("#"+id).get(0).files.length; i++) {
+    var current_file = $("#"+id).get(0).files[i];
+    var current_file_name = $("#"+id).get(0).files[i].name;
+    var error = 0;
+    if(current_file_name){
+        var ext = current_file_name.split('.').pop().toLowerCase();
+        if($.inArray(ext,['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG']) !== -1){
+            error = 0;
+            if(current_file_name){
+                console.log('test3');
+                var file_size=$("#"+id).get(0).files[i].size;
+                file_size = Math.round((file_size / 1024));
+                if(file_size>1024){
+                    error = 1;
+                    document.getElementById('variant_image_error_msg').innerHTML = 'Image should be upto 1MB*';
+                    $("#"+id).val('');
+                }else{
+                    error = 0;
+                    document.getElementById('variant_image_error_msg').innerHTML = '';
+                }
+            }
+            if(i == 0 && error == 0){
+                $('#primaryImage').attr('src',window.URL.createObjectURL(current_file)).css('height','100%').css('width','100%');
+                filecollection.push(current_file_name);
+            }else if(error == 0){
+                var img = `<div class="variant-pic inner_pics">
+                    <img style="height: 100%; width: 100%;" src="`+ window.URL.createObjectURL(current_file) + `" alt="`+current_file_name +`" />
+                </div>`;
+                console.log(img);
+                $('.secondary_images').append(img);
+                filecollection.push(current_file_name);
+            }
+        } else {
+            error = 1;
+            document.getElementById('variant_image_error_msg').innerHTML = 'Image should be jpg and png*';
+            $("#"+id).val('');
+        }
+        
+        
+    }
+}
+
+}
+</script>
+            
+      {% endblock content %}

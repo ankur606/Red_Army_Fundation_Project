@@ -1,0 +1,44 @@
+{% extends 'dasboard/index.html' %}
+{% load static %}
+  <title>{% block title %} Gallery Add Post {% endblock title %} </title>
+      {% block content %}
+      <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Post</h4>
+                  <p class="card-description">
+                    Post Gallery
+                  </p>
+                  <form class="forms-sample" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for message in messages %}
+                    <b style="color:#03e9f4" ></b>{{message}}</b>
+                    {% endfor %} <br>
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">Choice Event ID:</label>
+                      
+                      <select name="event_id" id="cars">
+                        {% for id in event_id %}
+                        <option name="event_id">{{id.id}}</option>
+                        {% endfor %}
+                      </select>
+                    
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Image </label>
+                      <input type="file" name="event_image" class="form-control" required id="exampleInputFile" >
+                    </div>
+                   
+                    <button type="submit" class="btn btn-primary mr-2">Save </button>
+                  
+                      
+                  </div>
+                  </form>
+                  
+                    <a href="{% url 'gallery' %}"> <button  class="btn btn-primary mr-2">Add Another Image </button></a>
+                      
+                  
+                </div>
+              </div>
+              
+      {% endblock content %}

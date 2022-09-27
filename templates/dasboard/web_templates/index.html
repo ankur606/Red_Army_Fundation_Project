@@ -1,0 +1,192 @@
+{% extends 'dasboard/web_templates/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<!--==================================
+=            Feature Grid            =
+===================================-->
+{% for data in data %}
+{% if data.id|divisibleby:2 %}
+<section class="feature section pt-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 ml-auto justify-content-center">
+				<!-- Feature Mockup -->
+				<div class="image-content" data-aos="fade-right">
+					<img class="img-fluid" src="{{ data.image.url }}" alt="iphone">
+				</div>
+			</div>
+			<div class="col-lg-6 mr-auto align-self-center">
+				<div class="feature-content">
+					<!-- Feature Title -->
+					<h2>{{data.headdings}} <a
+							href="#!">Ahmar App</a></h2>
+					<!-- Feature Description -->
+					<p class="desc">{{data.description}}</p>
+
+				</div>
+			
+			</div>
+			<div class="col-lg-12">
+				<div class="feature-content">
+					<p class="desc">{{data.content}}</p>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% else %}
+<section class="feature section pt-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 ml-auto align-self-center">
+				<div class="feature-content">
+					<h2>{{data.headdings}}<a href="#!">Ahmar Apps</a></h2>
+					<p>{{data.description}}</p>		
+				</div>
+
+				<div class="testimonial">
+					<p>{{data.content}}</p>
+					<ul class="list-inline meta">
+						<li class="list-inline-item">
+							<img src="" alt="">
+						</li>
+						<li class="list-inline-item">Jonathon Andrew , Ahmar.app</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-6 mr-auto justify-content-center">
+				<div class="image-content" data-aos="fade-left">
+					<img class="img-fluid" src="{{ data.image.url }}" alt="ANKUR">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endif %}
+
+{% endfor %}
+<!--====  End of Feature Grid  ====-->
+
+<!--======================   Events  =====================-->
+<section class="service section bg-gray">
+	<div class="container p-0">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<h2>Ahmar Latest Events</h2>
+					<p><a href="#!">Ahmar Apps</a> makes it easy to stay on top of your Life Style. No late tasks. No gimmicks.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			{% for data in event_data|slice:":3" %}
+			<div class="col-lg-4 col-md-6">
+				<article class="post-sm">
+					<div class="post-thumb">
+						<a href="#!"><img class="w-100" src="{{data.image.url}}" alt="Post-Image"></a>		
+					</div>
+					<div class="post-title">
+						<h3><a href="blog-single.html">{{data.headding}}</a></h3>
+					</div>
+					<div class="post-meta">
+						<ul class="list-inline post-tag">
+							<li class="list-inline-item">
+								<img src="{% static 'images/web_images/feature-testimonial-thumb.jpg' %}" alt="author-thumb">
+							</li>
+							<li class="list-inline-item"><a href="#">Thomas Johnson</a></li>
+							<li class="list-inline-item">August 8, 2017</li>
+						</ul>
+					</div>
+					<div class="post-details">
+						<p>{{data.description}} </p>
+					</div>
+				</article>
+			</div>
+			{% endfor %}
+
+		
+		</div>
+	</div>
+</section>
+<!--====  End of Events  ====-->
+
+
+
+
+<!--=================================
+=            Testimonial            =
+==================================-->
+<section class="section testimonial" id="testimonial">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="testimonial-slider owl-carousel owl-theme">
+					<div class="item">
+						<div class="block shadow">
+							<p>
+								Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
+								Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
+								sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
+								pretium ut lacinia in, elementum id enim.
+							</p>
+							<div class="image">
+								<img src="{% static 'images/web_images/feature-testimonial-thumb.jpg' %}" alt="image">
+							</div>
+							<cite>Abraham Linkon , Ahmar.app</cite>
+						</div>
+					</div>
+					<div class="item">
+						<div class="block shadow">
+							<p>
+								Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
+								Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
+								sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
+								pretium ut lacinia in, elementum id enim.
+							</p>
+							<div class="image">
+								<img src="{% static 'images/web_images/feature-testimonial-thumb.jpg' %}" alt="image">
+							</div>
+							<cite>Abraham Linkon , Ahmar.app</cite>
+						</div>
+					</div>
+					<div class="item">
+						<div class="block shadow">
+							<p>images/web_images/feature-testimonial-thumb.jpg
+								Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
+								Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
+								sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
+								pretium ut lacinia in, elementum id enim.
+							</p>
+							<div class="image">
+								<img src="{% static 'images/web_images/feature-testimonial-thumb.jpg' %}" alt="image">
+							</div>
+							<cite>Abraham Linkon , Ahmar.app</cite>
+						</div>
+					</div>
+					<div class="item">
+						<div class="block shadow">
+							<p>
+								Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
+								Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
+								sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
+								pretium ut lacinia in, elementum id enim.
+							</p>
+							<div class="image">
+								<img src="{% static 'images/web_images/feature-testimonial-thumb.jpg' %}" alt="image">
+							</div>
+							<cite>Abraham Linkon , Ahmar.app</cite>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--====  End of Testimonial  ====-->
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6><a href="" download> Download Forms </a></h6>
+          {% for data in data %}
+        <h4 class="card-title">Specail Needs Information Forms Recoard Details </h4>
+        {% endfor %}
+        <hr>
+        <br>
+        
+        
+        {% for data in data %}
+        <table  class="table-dark">
+          <td><h4>Specail Needs Information </h4></td>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Please Tick The Item (S) That Apply To You</td>
+           <td class="table-light" style="width: 600px;" >{{data.tick_the_item}}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Please Describe In Detail Your Current Needs And You Would Like The Foundation To Help You.</td>
+           <td class="table-light" >{{data.current_need_details}}</td>
+      
+
+          </tr>
+          <td><h4> Disability And Vulnerabilty - Related Information </h4></td>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Are You Disabled</td>
+           <td class="table-light" >{{data.disabled}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Describe Your Disability In Detail</td>
+           <td class="table-light" >{{data.disability_war_related}}</td>
+           
+          </tr>
+           
+            
+    
+     
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Orphaned During</td>
+           <td class="table-light" >{{data.orphaned_during}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Orphaned Answer</td>
+           <td class="table-light" >{{data.age_orphaned_details}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Widowed During </td>
+           <td class="table-light" >{{data.widowed_during}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Describe Widowed  Answer</td>
+           <td class="table-light" >{{data.describe_widowed}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Short Biography Detailings</td>
+           <td class="table-light" >{{data.addition_informations}}</td>
+           
+          </tr>
+         
+         
+       
+        </table>
+        
+        {% endfor %}
+         
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

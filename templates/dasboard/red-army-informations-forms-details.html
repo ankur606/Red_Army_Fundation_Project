@@ -1,0 +1,137 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+          {% for data in data %}
+        <h4 class="card-title">Red Army Information Forms Recoard Details </h4>
+        {% endfor %}
+        <hr>
+        <br>
+        <h6><a href="" download> Download Forms </a></h6>
+        
+        {% for data in data %}
+        <table  class="table-dark">
+          <td><h4>Red Army Information Forms Details </h4></td>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Camp (Markaz)</td>
+           <td class="table-light" style="width: 600px;" >{{data.camp}}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Division (Liwa)</td>
+           <td class="table-light" >{{data.division}}</td>
+      
+
+          </tr>
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Battalion (Katiba)</td>
+           <td class="table-light" >{{data.battalion}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Company (Siria)</td>
+           <td class="table-light" >{{data.company}}</td>
+           
+          </tr>
+           
+            
+    
+     
+           
+            
+        
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Platoon (Fasila)</td>
+           <td class="table-light" >{{data.platoon}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Squad (Jamaa)</td>
+           <td class="table-light" >{{data.squad}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Current Rank (Rutba)</td>
+           <td class="table-light" >{{data.current_rank}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Engaged On The Battlefield</td>
+           <td class="table-light" >{{data.engaged}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > List All The Military Operations</td>
+           <td class="table-light" >{{data.military_operations}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Engage In Any Battle Of The Splm/a During</td>
+           <td class="table-light" >{{data.any_battle}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Splm/a Liberation Struggle</td>
+           <td class="table-light" >{{data.liberation_struggle}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Original Military, Refugee, And Idp Camp</td>
+           <td class="table-light" >{{data.original_military}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Special Operations Or Foreign Missions.</td>
+           <td class="table-light" >{{data.special_operations}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Civil Administration Of The New Sudan (Cans)</td>
+           <td class="table-light" >{{data.civil_administration}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Job Titles And Locations You Worked</td>
+           <td class="table-light" >{{data.job_titles_and_locations}}</td>
+           
+          </tr>
+         
+       
+         
+       
+        </table>
+        
+        {% endfor %}
+         
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

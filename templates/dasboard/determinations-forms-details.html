@@ -1,0 +1,142 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+          {% for data in data %}
+        <h4 class="card-title"> Membership Determination  Information Forms Recoard Details </h4>
+        {% endfor %}
+        <hr>
+        <br>
+        <h6><a href="" download> Download Forms </a></h6>
+        
+        {% for data in data %}
+        <table  class="table-dark">
+          <td><h4>Membership Determination  Information Recoard Details </h4></td>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Membership Determination</td>
+           <td class="table-light" style="width: 600px;" >{{data.membership_determinations}}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Provided Reasons For Rejection</td>
+           <td class="table-light" >{{data.reasons_for_rejection}}</td>
+      
+
+          </tr>
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Membership Number</td>
+           <td class="table-light" >{{data.membership_number}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Confirmation Code</td>
+           <td class="table-light" >{{data.confirmation_code}}</td>
+           
+          </tr>
+           
+            
+    
+     
+           
+            
+        
+           
+       
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Membership Classification</td>
+           <td class="table-light" >{{data.membership_classification}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Membership Registration Fee Paid</td>
+           <td class="table-light" >{{data.registration_fee_paid}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Annual Subscription Dues Paid</td>
+           <td class="table-light" >{{data.subscription_dues_paid}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Any Contribution</td>
+           <td class="table-light" >{{data.any_contribution}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Any Donation</td>
+           <td class="table-light" >{{data.any_donation}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Official Waiver</td>
+           <td class="table-light" >{{data.official_waiver}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Notes</td>
+           <td class="table-light" >{{data.notes}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date of Application</td>
+           <td class="table-light" >{{data.date_of_application}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date of Admission</td>
+           <td class="table-light" >{{data.date_of_admission}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Full Name</td>
+           <td class="table-light" >{{data.full_name}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date</td>
+           <td class="table-light" >{{data.date}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Location</td>
+           <td class="table-light" >{{data.member_location}}</td>
+           
+          </tr>
+       
+         
+         
+       
+        </table>
+        
+        {% endfor %}
+         
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

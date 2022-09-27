@@ -1,0 +1,94 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Member Determination Forms Recoard Lists </h4>
+        
+        {% for message in messages %}
+        <b style="color:#208817; margin-left: 22px;">{{message}}</b>
+        {% endfor %} <br>
+        </h4>
+        
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+             <tr>
+                <th>Sr No</th>
+              
+                <th> Membership Determination </th>
+                <th>Membership Classification</th>
+     
+                
+                
+          
+        
+       
+                <th>Action</th>
+
+              </tr> 
+            </thead>
+            <tbody>
+              {% for data in  page_obj %}
+              <tr>
+                <td>
+                {{forloop.counter}}
+                </td>
+              
+                <td>{{data.membership_determinations}}</td>
+                <td>{{data.membership_classification}}</td>
+         
+                
+                 
+               
+      
+              
+     
+                <td>
+                   <a href="{% url 'memberDeterminationsdetails' data.id %}", class="btn btn-outline-success btn-sm">More Details</a>
+                   <a href="{% url 'memberDeterminationsDelete' data.id %}" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are You Sure')">Delete</a>
+                </td>
+              </tr>
+              
+               {% endfor %} 
+            </tbody>
+            
+          </table>
+          <div class="row" >
+            <nav aria-label="...">
+              <ul class="pagination">
+                <li class="page-item">
+                 {% if page_obj.has_previous %}
+                    <a class="page-link" href="?page={{page_obj.previous_page_number}}">Previous</a>
+                  {% endif %}
+                </li>
+                
+                <span  class="page-link"  >{{page_obj.number}}</span>
+               
+        
+                <li class="page-item">
+                  {% if page_obj.has_next %}
+                  <a class="page-link" href="?page={{page_obj.next_page_number}}">Next</a>
+                  {% endif %}
+                </li>
+              </ul>
+            </nav>
+           </div>
+        
+        </div>
+        
+        </div>
+
+
+      </div>
+    </div>
+ 
+
+ 
+  </div>
+
+
+{% endblock %}

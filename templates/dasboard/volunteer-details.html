@@ -1,0 +1,135 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+       
+        <h4 class="card-title">Volunteer Information Forms Recoard Details </h4>
+   
+        <hr>
+        <br>
+        
+        <h6><a href="" download> Download Forms </a></h6>
+        {% for data in data %}
+        <table  class="table-dark">
+          <td><h4> Current Engagement Details </h4></td>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Name of Organization</td>
+           <td class="table-light"  >{{data.current_name_of_organization}}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Type of Organization</td>
+           <td class="table-light" >{{data.current_type_of_organization}}</td>
+      
+
+          </tr>
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Job Title</td>
+           <td class="table-light" >{{data.current_job_title}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Job Description</td>
+           <td class="table-light" >{{data.current_job_description}}</td>
+           
+          </tr>
+           
+            
+    
+     
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Start Date</td>
+           <td class="table-light" >{{data.current_start_date}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >End Date</td>
+           <td class="table-light" >{{data.current_end_date}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Address of Organization </td>
+           <td class="table-light" >{{data.current_address_of_organization}}</td>
+           
+          </tr>
+
+            <td><h4>Previous Engagement Details</h4></td>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Name of Organization</td>
+           <td class="table-light" >{{data.pervious_name_of_organization}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Type of Organization</td>
+           <td class="table-light" >{{data.pervious_type_of_organization}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Job Title</td>
+           <td class="table-light" >{{data.pervious_job_title}}</td>
+           
+          </tr>
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Job Description</td>
+           <td class="table-light" >{{data.pervious_job_description}}</td>
+           
+          </tr>
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Type of Organization</td>
+           <td class="table-light" >{{data.pervious_type_of_organization}}</td>
+           
+          </tr>
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Start Date</td>
+           <td class="table-light" >{{data.pervious_start_date}}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > End Date</td>
+           <td class="table-light" >{{data.pervious_end_date}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Address of Organization</td>
+           <td class="table-light" >{{data.pervious_address_of_organization}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Notes</td>
+           <td class="table-light" >{{data.pervious_notes}}</td>
+           
+          </tr>
+        </table>
+        
+        {% endfor %}
+         
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

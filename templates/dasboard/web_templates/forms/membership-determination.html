@@ -1,0 +1,278 @@
+{% load static  %}
+{% include 'dasboard/web_templates/header.html' %}
+
+
+<!--==================================
+=      membership determination    =
+===================================-->
+
+
+<section class="personal-information-main-area">
+ <div class="container">
+  <div class="row">
+   <div class="col-lg-12 col-md-12 col-sm-12">
+   	<div class="form-information-heading-area">
+   	 <h2>MEMBERSHIP DETERMINATION</h2>
+   	</div>
+   </div>
+   <div class="col-lg-12 col-md-12 col-sm-12">
+   	<div class="personal-information-form-area">
+     <div class="personal-information-form-heading">
+      <h2>MEMBERSHIP DETERMINATION FORM</h2>	
+  
+     </div>		
+   	 <form class="personal-information-input-area" method="post" > 
+        {% csrf_token %}
+   	  <div class="row">	
+        
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+        <h4>Membership Determination</h4>
+         {{forms_data.membership_determinations}}
+        </div>	
+   	   </div>
+   	   <div class="col-lg-12 col-md-12 col-sm-12">
+   	    <div class="main-input-box">
+         <label>If Rejected, Provided Reasons For Rejection.</label>
+          <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="reasons_for_rejection" placeholder="If Rejected, Provided Reasons For Rejection"></textarea>
+         </div>
+        </div>	
+   	   </div>
+       <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="main-input-box">
+         <label>Membership Number</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Membership Number" name="membership_number" class="frm-size" >
+         </div>
+        </div>  
+       </div>
+       <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="main-input-box">
+         <label>Confirmation Code</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Confirmation Code" name="confirmation_code" class="frm-size" >
+         </div>
+        </div>  
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="main-input-box">
+          <label>Membership Classification</label>
+          {{forms_data.membership_classification}}
+         
+        </div>  
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="main-input-box">
+          <label>Membership Registration Fee Paid?</label>
+          {{forms_data.registration_fee_paid}}
+         
+          
+        </div>  
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="main-input-box">
+          <label>Annual Subscription Dues Paid</label>
+          {{forms_data.subscription_dues_paid}}
+        </div>  
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="main-input-box">
+          <label>Any Contribution</label>
+          {{forms_data.any_contribution}}
+        </div>  
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="main-input-box">
+          <label>Any Donation</label>
+          {{forms_data.any_donation}}
+        </div>  
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="main-input-box">
+          <label>Official Waiver</label>
+          {{forms_data.official_waiver}}
+        </div>  
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="main-input-box">
+         <label>Notes</label>
+          <div class="input-icon">
+           <textarea class="frm-size messege-box-size" name="notes" placeholder="Notes"></textarea>
+         </div>
+        </div>  
+       </div>
+       <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="main-input-box">
+         <label>Date of Application</label>
+          <div class="input-icon">
+           <input type="date" placeholder="Name of School" name="date_of_application" class="frm-size" >
+         </div>
+        </div>  
+       </div>
+       <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="main-input-box">
+         <label>Date of Admission</label>
+          <div class="input-icon">
+           <input type="date" placeholder="Name of School" name="date_of_admission" class="frm-size" >
+         </div>
+        </div>  
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="main-input-box">
+         <label>To Officially Authorize The Registration Of A Member, Write Your Full Name, Date, And Locationto Sign Electronically.</label> 
+        </div>  
+       </div>
+       <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="main-input-box-sub-heading">
+         <label>Full Name</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Full Name" name="full_name" class="frm-size" >
+         </div>
+        </div>  
+       </div>
+       <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="main-input-box-sub-heading">
+         <label>Date</label>
+          <div class="input-icon">
+           <input type="date" placeholder="" name="date" class="frm-size-date" >
+         </div>
+        </div>  
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="main-input-box-sub-heading">
+         <label>Location</label>
+          <div class="input-icon">
+           <input type="text" placeholder="Location" name="member_location" class="frm-size" >
+         </div>
+        </div>  
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="form-submit-btn-area">
+         <button  type="submit" class="form-submit-btn">SUBMIT</button>
+        </div>
+       </div>
+   	  </div> 	
+   	 </form>	
+   	</div>
+   </div>
+  </div>	
+ </div>		
+</section>
+
+<!--==================================
+=      membership determination    =
+===================================-->
+
+
+
+
+
+
+
+<!--============================
+=            Footer            =
+=============================-->
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-12 m-md-auto align-self-center">
+          <div class="block footer-logo">
+            <a href="#!"><img src="images/bannerImg2.png" alt="footer-logo"></a>
+            <ul class="social-icon list-inline">
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-pinterest-alt"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
+          <div class="block-2">
+            <h6>Product</h6>
+            <ul>
+              <li><a href="#!">Teams & Conditions</a></li>
+              <li><a href="#!">Privacy Policy</a></li>
+              <li><a href="#!">Cookie Policy</a></li>
+              <li><a href="#!">Legal Desclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-3 col-6 mt-5 mt-lg-0">
+          <div class="block-2">           
+            <div class="single">
+				<h2>Subscribe to our Newsletter</h2>
+				<p>Subscribe to stay in the loop with our Programs updates and events</p>
+			<div class="input-group">
+		     <input type="email" class="form-control" placeholder="Enter your email">
+		     <span class="input-group-btn">
+		     <button class="btn btn-theme" type="submit">Subscribe</button>
+		     </span>
+		      </div>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center bottomFooter py-3">
+    <Ahmar class="text-secondary">Copyright &copy; Designed &amp; Developed by <a href="#!">Webnmobapps Solutions</a></Ahmar class="text-secondary">
+  </div>
+</footer>
+
+
+  <!-- To Top -->
+  <div class="scroll-top-to">
+    <i class="ti-angle-up"></i>
+  </div>
+  
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  
+  <script src="js/script.js"></script>
+
+<script type="text/javascript">
+ function initializeFileUploads() {
+    $('.file-upload').change(function () {
+        var file = $(this).val();
+        $(this).closest('.input-icon').find('.file-upload-text').val(file);
+    });
+    $('.file-upload-btn').click(function () {
+        $(this).find('.file-upload').trigger('click');
+    });
+    $('.file-upload').click(function (e) {
+        e.stopPropagation();
+    });
+}
+
+
+// On document load:
+$(function() {
+    initializeFileUploads();
+});	
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!-- table-body -->
+{% extends 'pages/index.html' %}
+{% load static %}
+  <title>{% block title %} about Us {% endblock title %} </title>
+      {% block content %}
+  <div class="col-lg-11 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title"> </h4>
+        <p class="card-description">
+         
+        </p>
+        <div class="table-responsive">
+        <h4 class="card-title">About Other<a href="about-us-other-add" class="btn btn-success btn-sm" style="margin-left: 22px;">Add New</a>
+        {% for message in messages %}
+      <b style="color:#03e9f4" >{{message}}</b>
+      {% endfor %} <br><br>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>
+                 Sr No
+                </th>
+                <th>
+                  Title
+                </th>
+               <th>
+                  Description
+                </th>
+                
+                <th>
+                  Action
+                </th>
+                <th>
+                  blank
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for all in about_box %}
+              <tr>
+              <td>
+                {{forloop.counter}}
+                  
+                </td>
+                <td>
+                  {{all.title}}
+                </td>  
+                <td>
+                  {{all.description}}
+                </td>  
+                <td> 
+                  <a href="edit-other/{{all.id}}" class="btn btn-outline-success btn-sm">Edit</a>   
+                  <a href="delete-other/{{all.id}}" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are You Sure')">Delete</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}

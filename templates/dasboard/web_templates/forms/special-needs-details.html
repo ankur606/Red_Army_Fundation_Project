@@ -1,0 +1,245 @@
+{% load static  %}
+{% include 'dasboard/web_templates/header.html' %}
+
+
+
+
+
+<!--==================================
+=         employment information    =
+===================================-->
+
+
+
+<section class="personal-information-main-area">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="form-information-heading-area"  >
+       <h2>SPECIAL NEEDS DETAILS</h2>
+       <p>As a privilege and benefit to you as an active registered member, the Red Army Foundation is not only promoting, protecting, and preserving your patriotic legacy during the liberation struggle, but it’s also mindful of your current welfare and, in any case, a member requires assistance, so long as you are a member in good standing in character and deeds, your foundation will be there to advocate on your behalf.</p>	
+      </div>
+    </div>
+    <form class="personal-information-input-area" method="post">
+      {% csrf_token %}
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>SPECIAL NEEDS DETAILS FORM</h2>	
+       <h4>Please Tick The Item (S) That Apply To You.</h4>
+      </div>		
+      
+        <div class="row">	
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          {{forms_data.tick_the_item}}
+         </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="main-input-box">
+          <label>Please Describe In Detail Your Current Needs And You Would Like The Foundation To Help You.</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="current_need_details" placeholder="Please Describe In Detail Your Current Needs And You Would Like The Foundation To Help You"></textarea>
+          </div>
+         </div>	
+         </div>
+        </div> 	
+    
+      </div>
+    </div>
+     <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>DISABILITY AND VULNERABILITY-RELATED INFORMATION FORM</h2>	
+
+        <div class="row">	
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="main-input-box">
+           <label>Are You Disabled?</label>	
+          
+            {{forms_data.disabled}}
+     
+         </div>	
+         </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="main-input-box">
+          <label>If The Answer Is Yes, Is Your Disability War-related? If You Have A Disability, Can You Describe Your Disability In Detail And How You Became Disabled, And When And Where?) </label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="disability_war_related" placeholder="You Describe Your Disability In Detail And How You Became Disabled, And When And Where?"></textarea>
+          </div>
+         </div>	
+         </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="main-input-box">
+           <label>Were You Orphaned During The Splm/a War Of 1983-2005?</label>	
+            {{forms_data.orphaned_during}}
+         </div>	
+         </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="main-input-box">
+          <label>If The Answer Is Yes, Describe Who You Lost, At What Age, And When You Were Orphaned? </label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="age_orphaned_details" placeholder="If The Answer Is Yes, Describe Who You Lost, At What Age, And When You Were Orphaned?"></textarea>
+          </div>
+         </div>	
+         </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="main-input-box">
+           <label>Were You Widowed During The Splm/a War Of 1983-2005?</label>	
+            {{forms_data.widowed_during}}
+         </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="main-input-box">
+          <label>If The Answer Is Yes, Describe Who You Lost, At What Age, And When You Were Widowed?</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="describe_widowed" placeholder="If The Answer Is Yes, Describe Who You Lost, At What Age, And When You Were Widowed?"></textarea>
+          </div>
+         </div>	
+         </div>
+        </div> 	
+     
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>ADDITION INFORMATION FORM</h2>	
+      </div>		
+
+        <div class="row">	
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="main-input-box">
+          <label>Please Share Your Short Biography Detailing Your Red Army Service And Experiences During And After The Liberation Struggle Between 1983 And Now. Include Any Other Relevant Information, Including Any Effect Of War, If Any.</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="addition_informations" placeholder="Please Write Your Short Biography"></textarea>
+          </div>
+         </div>	
+         </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="form-submit-btn-area">
+           <button class="form-submit-btn" type="submit" >SUBMIT</button>	
+          </div>
+         </div>
+        </div> 	
+       </form>	
+      </div>
+    </div>
+   </div>	
+  </div>		
+ </section>
+ 
+
+<!--==================================
+=       employment information    =
+===================================-->
+
+
+
+
+
+
+
+<!--============================
+=            Footer            =
+=============================-->
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-12 m-md-auto align-self-center">
+          <div class="block footer-logo">
+            <a href="#!"><img src="images/bannerImg2.png" alt="footer-logo"></a>
+            <ul class="social-icon list-inline">
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-pinterest-alt"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
+          <div class="block-2">
+            <h6>Product</h6>
+            <ul>
+              <li><a href="#!">Teams & Conditions</a></li>
+              <li><a href="#!">Privacy Policy</a></li>
+              <li><a href="#!">Cookie Policy</a></li>
+              <li><a href="#!">Legal Desclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-3 col-6 mt-5 mt-lg-0">
+          <div class="block-2">           
+            <div class="single">
+				<h2>Subscribe to our Newsletter</h2>
+				<p>Subscribe to stay in the loop with our Programs updates and events</p>
+			<div class="input-group">
+		     <input type="email" class="form-control" placeholder="Enter your email">
+		     <span class="input-group-btn">
+		     <button class="btn btn-theme" type="submit">Subscribe</button>
+		     </span>
+		      </div>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center bottomFooter py-3">
+    <Ahmar class="text-secondary">Copyright &copy; Designed &amp; Developed by <a href="#!">Webnmobapps Solutions</a></Ahmar class="text-secondary">
+  </div>
+</footer>
+
+
+  <!-- To Top -->
+  <div class="scroll-top-to">
+    <i class="ti-angle-up"></i>
+  </div>
+  
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  
+  <script src="js/script.js"></script>
+
+<script type="text/javascript">
+ function initializeFileUploads() {
+    $('.file-upload').change(function () {
+        var file = $(this).val();
+        $(this).closest('.input-icon').find('.file-upload-text').val(file);
+    });
+    $('.file-upload-btn').click(function () {
+        $(this).find('.file-upload').trigger('click');
+    });
+    $('.file-upload').click(function (e) {
+        e.stopPropagation();
+    });
+}
+
+
+// On document load:
+$(function() {
+    initializeFileUploads();
+});	
+</script>
+
+
+</body>
+
+</html>

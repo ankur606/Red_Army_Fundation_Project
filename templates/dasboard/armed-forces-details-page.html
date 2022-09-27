@@ -1,0 +1,137 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+          {% for data in data %}
+        <h4 class="card-title">Armed Forces Information Forms Recoard Details </h4>
+        {% endfor %}
+        <hr>
+        <br>
+        
+        <h6><a href="" download> Download Forms </a></h6>
+        {% for data in data %}
+        <table  class="table-dark">
+          <td><h4>Armed Forces Information Recoard Details </h4></td>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Armed Forces Active Service</td>
+           <td class="table-light" style="width: 600px;" >{{data.forces_active_service}}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Your Current Duty Station</td>
+           <td class="table-light" >{{data.current_duty_station}}</td>
+      
+
+          </tr>
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >south Sudan National Police Service</td>
+           <td class="table-light" >{{data.national_police_service}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >South Sudan National Wildlife Service</td>
+           <td class="table-light" >{{data.wildlife_service}}</td>
+           
+          </tr>
+           
+            
+    
+     
+           
+            
+        
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >National Prison Service of South Sudan</td>
+           <td class="table-light" >{{data.national_prison_service}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > South Sudan National Civil Defence Service</td>
+           <td class="table-light" >{{data.civil_defence_service}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >South Sudan National Security Service</td>
+           <td class="table-light" >{{data.national_security_service}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >What Is Your Current Rank</td>
+           <td class="table-light" >{{data.current_rank}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Do You Have Any Assignments</td>
+           <td class="table-light" >{{data.any_assignments}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >What Is Your Current Assignment</td>
+           <td class="table-light" >{{data.current_assignment}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Your Superior About You Getting An Assignment</td>
+           <td class="table-light" >{{data.getting_an_assignment}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Assistance With The Rank Adjustment</td>
+           <td class="table-light" >{{data.rank_adjustment}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >The Nature Of Your Complaint</td>
+           <td class="table-light" >{{data.kind_of_assistance}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Recognition With Rank Or Medal</td>
+           <td class="table-light" >{{data.rank_or_medal}}</td>
+           
+          </tr>
+         
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >If The Answer Is Yes, Provided Details Of Such Heroic Act Or Service</td>
+           <td class="table-light" >{{data.heroic_act_or_service}}</td>
+           
+          </tr>
+         
+       
+         
+       
+        </table>
+        
+        {% endfor %}
+         
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'dasboard/web_templates/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div>
+    {% if messages %}
+        {% for message in messages %}
+       <script>swal('Red Army Foundations!','{{message}}');</script>
+        {% endfor %}
+    
+    {% endif %}
+    </div>
+
+<h5><b>Personal Information Forms</b></h5><a href="{% url 'personalIformation' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+<h5><b>Education Information Forms</b></h5><a href="{% url 'educationIformation' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+<h5><b>Employment Information Forms</b></h5><a href="{% url 'employmentInformation' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+<h5><b>Special Needs Information Forms</b></h5><a href="{% url 'special_needsDetails' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+<h5><b>Volunteer  Information Forms</b></h5><a href="{% url 'volunteerInformation' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+<h5><b>Member Declarations Forms</b></h5><a href="{% url 'memberDeclaration' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+<h5><b>Membership Determination  Forms</b></h5><a href="{% url 'membershipDetermination' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+<h5><b>Red Army Services Forms</h5><a href="{% url 'armyServices' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+<h5><b>Armed Forces Services Forms</b></h5><a href="{% url 'armedForces' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+<h5><b>Commerdation Information Forms</b></h5><a href="{% url 'sspdfCommendation' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+<h5><b>Martyrs Information Forms</b></h5><a href="{% url 'army-martyrs' %}" style="color: blue;" > <b>Click link</b>  </a>
+<br>
+
+
+{% endblock %}

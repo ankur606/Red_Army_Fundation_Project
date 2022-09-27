@@ -1,0 +1,113 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+  <title>{% block title %} Page Enable & disable {% endblock title %} </title>
+      {% block content %}
+
+<div class="col-lg-11 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  
+                  <p class="card-description">
+                   
+                  </p>
+                  <h4 class="card-title">Page Enable & disable</h4>
+                  <div class="table-responsive">
+                  {% for message in messages %}
+                <b style="color:#03e9f4" >{{message}}</b>
+                {% endfor %} <br>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>
+                            Home
+                          </th>
+                          <th>
+                            About Us
+                          </th>
+                          <th>
+                            Service
+                          </th>
+                           <th>
+                            Gallery
+                          </th>
+
+                            <th>
+                            Contact Us
+                          </th>
+                          <th>
+                            Action
+                          </th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                     
+                        <tr>
+                         
+                        {% if page.home == "True"  %} 
+                          <td>
+                            Enable
+                          </td>
+                          {% else %}
+                          <td>
+                            Disable
+                          </td>
+                          {% endif %}
+                            
+                            
+                           {% if page.about == "True"  %} 
+                          <td>
+                            Enable
+                          </td>
+                          {% else %}
+                          <td>
+                            Disable
+                          </td>
+                        
+                          {% endif %}
+
+                           {% if page.service == "True"  %} 
+                          <td>
+                            Enable
+                          </td>
+                          {% else %}
+                          <td>
+                            Disable
+                          </td>
+                          {% endif %}
+
+                           {% if page.gallery == "True"  %} 
+                          <td>
+                            Enable
+                          </td>
+                          {% else %}
+                          <td>
+                            Disable
+                          </td>
+                          {% endif %}
+
+                           {% if page.contact == "True"  %} 
+                          <td>
+                            Enable
+                          </td>
+                          {% else %}
+                          <td>
+                            Disable
+                          </td>
+                          {% endif %}
+                         <td>
+                            <a href="page-enable-disable" class="btn btn-outline-success btn-sm">Edit</a>
+                            
+                          </td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+ {% endblock content %}
+

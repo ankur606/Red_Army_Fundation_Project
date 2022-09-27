@@ -1,0 +1,73 @@
+
+{% extends 'dasboard/index.html' %}
+<title>{% block title %} Alahamar Admin Profile User {% endblock title %} </title>
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+
+        <h4 class="card-title"> Admin User Profile </h4>
+      
+        <hr>
+        <br>
+    
+        
+     
+
+        <table  class="table-dark">
+          <td><h4>Alahamar Admin User Profile  </h4></td>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light"  style="width: 600px;" >Admin User Image</td>
+           <td class="table-light" ><img style="height: 2in; width: 6cm;" src="{{request.user.image.url}}" alt=""></td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >UserName </td>
+           <td class="table-light" >{{request.user.username}}</td>
+           
+          </tr>
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Phone Number </td>
+           <td class="table-light" >{{request.user.phone_number}}</td>
+      
+
+          </tr>
+
+     
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Email Id</td>
+           <td class="table-light" >{{request.user.email}}</td>
+           
+          </tr>
+           
+            
+    
+     
+           
+            
+        
+           
+       
+           
+       
+         
+         
+       
+        </table>
+        
+   
+         
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

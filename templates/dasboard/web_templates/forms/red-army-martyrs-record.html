@@ -1,0 +1,1000 @@
+{% load static  %}
+{% include 'dasboard/web_templates/header.html' %}
+
+
+
+
+
+<!--==================================
+=       red army martyrs record    =
+===================================-->
+
+
+<section class="personal-information-main-area">
+  <div class="container">
+   <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="form-information-heading-area">
+       <h2>RED ARMY MARTYRS RECORD</h2>
+       <p>This exercise aims to collect, compile, document, and preserve all personal details of Red Army Martyrs from 1983 to date. This form should be filled out in its entirety by any willing person, may it be a relative, friend, or colleague of the deceased, missing Red Army, or captured but presumed dead.</p>	
+      </div>
+   
+      <form class="personal-information-input-area" method="post" enctype="multipart/form-data">
+        {% csrf_token %} 
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>RED ARMY MARTYRS RECORD FORM</h2>	
+       <div class="row">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Upload Your Photos</label>
+           <div class="input-icon">
+            <div class="show-upload-img-area">
+             <img src="images/demo-img.png" alt="">
+            </div> 
+            <input type="text" class="upload-frm-size file-upload-text" disabled="" placeholder="select a file...">
+             <span class="input-group-btn">
+              <button type="button" class="upload-btn file-upload-btn">
+                UPLOAD PHOTO
+                <input type="file" class="file-upload" name="image">
+              </button>
+            </span>
+          </div>
+         </div>  
+        </div> 
+       </div>
+      </div>
+      
+      </div>		
+      <div class="row">	 
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          
+          <div class="main-input-box">
+            <h5>Causality Status</h5>
+          {{forms_data.causality_status}}
+          </div>
+        
+         </div>	
+         </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="main-input-box">
+          <label>Cause of Death.</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="cause_of_death" placeholder="Cause of Death"></textarea>
+          </div>
+         </div>	
+         </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Description Of Circumstances That Led To Death.</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="led_to_death" placeholder="Description Of Circumstances That Led To Death"></textarea>
+          </div>
+         </div>  
+        </div>
+        </div> 	
+     
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+     <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>CAUSALITY PERSONAL INFORMATION FORM</h2>  
+      </div>   
+     
+       <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Full Name</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Full Name" name="full_name" class="frm-size" uired="">
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Alias or Nicknames</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Alias or Nicknames" name="alias_or_nicknames" class="frm-size" >
+          </div>
+         </div>  
+        </div> 
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Gender</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Gender" name="gender" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Date of Birth</label>
+           <div class="input-icon">
+            <input type="date" placeholder="Alias or Nicknames" name="date_of_birth" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Date of Death</label>
+           <div class="input-icon">
+            <input type="date" placeholder="Date of Death" name="date_of_death" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Place of Death</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Place of Death" name="place_of_death" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Issuing Country</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Issuing Country" name="issuing_country" class="frm-size" > 
+          </div>
+         </div>  
+        </div> 
+         <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Nationality at Birth</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Nationality at Birth" name="nationality_at_birth" class="frm-size" >  
+          </div>
+         </div>  
+        </div> 
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Other Citizenships</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Other Citizenships" name="other_citizenships" class="frm-size" >  
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>State of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="State of Origin" name="state_of_rigin" class="frm-size" > 
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>County of Origin</label>
+           <div class="input-icon">
+             <input type="text" placeholder="County of Origins" name="county_of_origin" class="frm-size" > 
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Payam of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Payam of Origin" name="payam_of_origin" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Boma of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Boma of Origin" name="boma_of_origin" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Tribe</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Tribe" name="tribe" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Race</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Race" name="race" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Additional Information</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="additional_information" placeholder="Additional Information"></textarea>
+          </div>
+         </div>  
+        </div>
+       </div>  
+
+     </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+     <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>MARTYRRED ARMY SERVICE INFORMATION FORM</h2>  
+      </div> 
+     
+       <div class="row"> 
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Camp (Markaz)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Camp (Markaz)" name="camp" class="frm-size" >
+          </div>
+         </div>  
+        </div> 
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Division (Liwa)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Division (Liwa)" name="division" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Battalion (Katiba)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Battalion (Katiba)" name="battalion" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Company (Siria)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Company (Siria)" name="company" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Platoon (Fasila)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Platoon (Fasila)" name="platoon" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Squad (Jamaa)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Squad (Jamaa)" name="squad" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Rank (Rutba)</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Current Rank (Rutba)" name="rank" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="main-input-box">
+          <label>Marital Status</label>
+           <div class="marital-statu-main-area">
+             <span class="marital-status-check-box">
+               <input type="radio" id="children" name="causality_marital_status" value="Married With children">
+               <label for="children">Married  With children</label>
+ 
+               <input type="radio" id="nochildren" name="causality_marital_status"  value="Married  Without children" >
+               <label for="nochildren">Married Without children</label>
+ 
+               <input type="radio" id="nevermarried" name="causality_marital_status" value="Single Never Married">
+               <label for="nevermarried">Single  Never Married</label> 
+ 
+               <input type="radio" id="widower" name="causality_marital_status" value="Widowed Widow or Widower" >
+               <label for="widower">Widowed Widow or Widower</label>
+ 
+               <input type="radio" id="divorced" name="causality_marital_status" value="Divorced">
+               <label for="divorced">Divorced</label>
+ 
+               <input type="radio" id="engaged" name="causality_marital_status" value="Engaged" >
+               <label for="engaged">Engaged</label> 
+ 
+               <input type="radio" id="separated" name="causality_marital_status" value="Separated" >
+               <label for="separated">Separated</label> 
+ 
+               <input type="radio" id="lifepartner" name="causality_marital_status" value="Life Partner" >
+               <label for="lifepartner">Life Partner</label> 
+              </span> 
+          </div>
+         </div>	
+         </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If Married, How Many Wives?</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Write Your Answers" name="how_many_wive" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If you have children or dependents, how many?</label>
+           <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12"> 
+             <div class="input-icon">
+               <input type="text" placeholder="Boys" name="boys" class="frm-size" >
+             </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12"> 
+             <div class="input-icon">
+               <input type="text" placeholder="Girls" name="girls" class="frm-size" >
+             </div>
+            </div>
+           </div>
+          </div> 
+         </div>
+       </div>  
+  
+     </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+     <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>NEXT OF KIN INFORMATION FORM</h2> 
+      </div>   
+      
+       <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Full Name</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Full Name" name="next_full_name" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Alias or Nicknames</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Alias or Nicknames" name="next_alias_or_nicknames" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Relationship</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Relationship" name="next_relationship" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Gender</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Gender" name="next_gender" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Date of Birth</label>
+           <div class="input-icon">
+            <input type="date" placeholder="Date of Birth" name="next_date_of_birth" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Place of Birth</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Place of Birth" name="next_place_of_birth" class="frm-size" > 
+          </div>
+         </div>  
+        </div> 
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Identification Number</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Identification Number" name="next_identification_number" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Type of Identification</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Type of Identification" name="next_type_of_identification" class="frm-size" > 
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Issuing Country</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Issuing Country" name="next_issuing_country" class="frm-size" > 
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Nationality at Birth</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Nationality at Birth" name="next_nationality_at_birth" class="frm-size" > 
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Other Citizenships</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Other Citizenships" name="next_other_citizenships" class="frm-size" > 
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>State of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="State of Origin" name="next_state_of_rigin" class="frm-size" > 
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>County of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="County of Origin" name="next_county_of_origin" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+         <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Payam of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Payam of Origin" name="next_payam_of_origin" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Boma of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Boma of Origin" name="boma_origin" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>State or Area of Residence</label>
+           <div class="input-icon">
+            <input type="text" placeholder="State or Area of Residence" name="next_state_or_area_of_residence" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>County of Residence</label>
+           <div class="input-icon">
+            <input type="text" placeholder="County of Residence" name="next_county_of_residence" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Payam of Residence</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Payam of Residence" name="next_payam_of_residence" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Boma of Residence</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Boma of Residence" name="next_boma_of_residence" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Tribe</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Tribe" name="next_tribe" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Race</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Race" name="next_race" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Religion</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Religion" name="next_religion" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Physical Address</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Physical Address" name="next_physical_address" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Mailing Address</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Mailing Address" name="next_mailing_address" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Telephone Numbers</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Telephone Numbers" name="next_telephone_numbers" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Email Addresses</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Email Addresses" name="next_email_address" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>WhatsApp Number</label>
+           <div class="input-icon">
+            <input type="text" placeholder="WhatsApp Number" name="next_whatsApp_number" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Social Media Handles</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Social Media Handles" name="next_social_media_handles" class="frm-size" >
+            <div class="add-input-box-area">
+            <p>+</p> 
+           </div>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Other Contacts</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Other Contacts" name="next_other_contact_number" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Additional Information</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="next_additional_information" placeholder="Additional Information"></textarea>
+          </div>
+         </div>  
+        </div>
+       </div>  
+    
+     </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+     <div class="next-information-heading-area">
+      <h4>IF THE PERSON REPORTING THIS IS DIFFERENT FROM NEXT OF KIN, PLEASE PROVIDE YOUR DETAILED INFORMATION.</h4> 
+     </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+     <div class="personal-information-form-area">
+      <div class="personal-information-form-heading">
+       <h2>NEXT OF KIN INFORMATION FORM</h2> 
+      </div>   
+
+       <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>First Name</label>
+           <div class="input-icon">
+            <input type="text" placeholder="First Name" name="person_full_name" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Alias or Nicknames</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Alias or Nicknames" name="person_alias_or_nicknames" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Relationship</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Relationship" name="person_relationship" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Gender</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Gender" name="person_gender" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Date of Birth</label>
+           <div class="input-icon">
+            <input type="date" placeholder="Date of Birth" name="person_date_of_birth" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Place of Birth</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Place of Birth" name="person_place_of_birth" class="frm-size" > 
+          </div>
+         </div>  
+        </div> 
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Identification Number</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Identification Number" name="person_identification_number" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Type of Identification</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Type of Identification" name="person_type_of_identification" class="frm-size" >  
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Issuing Country</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Issuing Country" name="person_issuing_country" class="frm-size" >  
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Nationality at Birth</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Nationality at Birth" name="person_nationality_at_birth" class="frm-size" > 
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Other Citizenships</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Other Citizenships" name="person_other_citizenships" class="frm-size" > 
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>State of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="State of Origin" name="person_state_of_rigin" class="frm-size" > 
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>County of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="County of Origin" name="person_county_of_origin" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+         <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Payam of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Payam of Origin" name="person_payam_of_origin" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Boma of Origin</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Boma of Origin" name="person_boma_of_origin" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>State or Area of Residence</label>
+           <div class="input-icon">
+            <input type="text" placeholder="State or Area of Residence" name="person_state_or_area_of_residence" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>County of Residence</label>
+           <div class="input-icon">
+            <input type="text" placeholder="County of Residence" name="person_county_of_residence" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Payam of Residence</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Payam of Residence" name="person_payam_of_residence" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Boma of Residence</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Boma of Residence" name="person_boma_of_residence" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Tribe</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Tribe" name="person_tribe" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Race</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Race" name="person_race" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Religion</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Religion" name="person_religion" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Physical Address</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Physical Address" name="person_physical_address" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Mailing Address</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Mailing Address" name="person_mailing_address" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Telephone Numbers</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Telephone Numbers" name="person_telephone_numbers" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Email Addresses</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Email Addresses" name="person_email_address" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>WhatsApp Number</label>
+           <div class="input-icon">
+            <input type="text" placeholder="WhatsApp Number" name="person_whatsApp_number" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Social Media Handles</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Social Media Handles" name="person_social_media_handles" class="frm-size" >
+            <div class="add-input-box-area">
+            <p>+</p> 
+           </div>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Other Contacts</label>
+           <div class="input-icon">
+            <input type="text" placeholder="Other Contacts" name="person_other_contact_number" class="frm-size" >
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Additional Information</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="person_additional_information" placeholder="Additional Information"></textarea>
+          </div>
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>Is There Any Exceptional Or Heroic Act Or Service The Deceased Performed That Deserves Posthumous Recognition With Rank Or Medal?</label> 
+          <div class="employment-information-check-box">
+           {{forms_data.rank_or_medal}}
+          </div>
+          
+         </div>  
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="main-input-box">
+          <label>If The Answer Is Yes, Provided Details Of Such Heroic Act Or Service.</label>
+           <div class="input-icon">
+            <textarea class="frm-size messege-box-size" name="heroic_act_or_service" placeholder="Provided Detail"></textarea>
+          </div>
+         </div>  
+        </div>
+         <div class="col-lg-12 col-md-12 col-sm-12">
+         <div class="form-submit-btn-area">
+          <button class="form-submit-btn" type="submit" >SUBMIT</button> 
+         </div>
+       
+        </div>
+       </div>  
+      </form>  
+     </div>
+    </div>
+   </div>	
+  </div> 
+  </div>		
+ </section>
+ 
+
+<!--==================================
+=     red army martyrs record    =
+===================================-->
+
+
+
+
+
+
+
+<!--============================
+=            Footer            =
+=============================-->
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-12 m-md-auto align-self-center">
+          <div class="block footer-logo">
+            <a href="#!"><img src="images/bannerImg2.png" alt="footer-logo"></a>
+            <ul class="social-icon list-inline">
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-twitter"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-pinterest-alt"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#!"><i class="ti-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
+          <div class="block-2">
+            <h6>Product</h6>
+            <ul>
+              <li><a href="#!">Teams & Conditions</a></li>
+              <li><a href="#!">Privacy Policy</a></li>
+              <li><a href="#!">Cookie Policy</a></li>
+              <li><a href="#!">Legal Desclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-3 col-6 mt-5 mt-lg-0">
+          <div class="block-2">           
+            <div class="single">
+				<h2>Subscribe to our Newsletter</h2>
+				<p>Subscribe to stay in the loop with our Programs updates and events</p>
+			<div class="input-group">
+		     <input type="email" class="form-control" placeholder="Enter your email">
+		     <span class="input-group-btn">
+		     <button class="btn btn-theme" type="submit">Subscribe</button>
+		     </span>
+		      </div>
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center bottomFooter py-3">
+    <Ahmar class="text-secondary">Copyright &copy; Designed &amp; Developed by <a href="#!">Webnmobapps Solutions</a></Ahmar class="text-secondary">
+  </div>
+</footer>
+
+
+  <!-- To Top -->
+  <div class="scroll-top-to">
+    <i class="ti-angle-up"></i>
+  </div>
+  
+  <!-- JAVASCRIPTS -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <script src="plugins/aos/aos.js"></script>
+  <!-- google map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgeuuDfRlweIs7D6uo4wdIHVvJ0LonQ6g"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  
+  <script src="js/script.js"></script>
+
+<script type="text/javascript">
+ function initializeFileUploads() {
+    $('.file-upload').change(function () {
+        var file = $(this).val();
+        $(this).closest('.input-icon').find('.file-upload-text').val(file);
+    });
+    $('.file-upload-btn').click(function () {
+        $(this).find('.file-upload').trigger('click');
+    });
+    $('.file-upload').click(function (e) {
+        e.stopPropagation();
+    });
+}
+
+
+// On document load:
+$(function() {
+    initializeFileUploads();
+});	
+</script>
+
+
+</body>
+
+</html>

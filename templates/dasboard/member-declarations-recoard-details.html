@@ -1,0 +1,64 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <h6><a href="" download> Download Forms </a></h6>
+      <div class="card-body">
+          {% for data in data %}
+        <h4 class="card-title">Member Declarations Forms Recoard Details </h4>
+        {% endfor %}
+        <hr>
+        <br>
+        
+        
+        {% for data in data %}
+        <table  class="table-dark">
+          <tr><h4>Member Declarations Forms Details </h4></tr>
+          
+          <tr class="table-light" style="width: 550px;" >
+            <td class="table-light"  >Declaration</td>
+           <td class="table-light"  >{{data.declaration}}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Full Name</td>
+           <td class="table-light" >{{data.full_name}}</td>
+      
+
+          </tr>
+        
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date</td>
+           <td class="table-light" >{{data.date}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Location</td>
+           <td class="table-light" >{{data.location}}</td>
+           
+          </tr>
+           
+            
+    
+     
+        
+         
+       
+        </table>
+        
+        {% endfor %}
+         
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

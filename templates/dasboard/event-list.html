@@ -1,0 +1,98 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Only Super  User <a href="{% url 'event' %}" class="btn btn-success btn-sm" style="margin-left: 22px;">Add New Event</a>
+        
+      {% for message in messages %}
+      <b style="color:#208817; margin-left: 22px;">{{message}}</b>
+      {% endfor %} <br>
+        </h4>
+        
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+             <tr>
+                <th>Sr No</th>
+                <th>Event Headding</th>
+              
+                <th> Event Description </th>
+                <th>Event Date</th>
+
+                <th>Action</th>
+
+              </tr> 
+            </thead>
+            <tbody>
+              {% for data in page_obj %}
+              <tr>
+                <td>
+                 <a href=""  > {{forloop.counter}}</a>
+                </td>
+                <td>
+                  {{data.headding}}
+                </td>
+              
+                <td>
+                  {{data.description|slice:":10"}} ...
+                 </td>
+       
+        
+                 <td>
+                   12/06/2022
+                 </td>
+             
+                <td>
+                   <a href="{% url 'eventEdit' data.id %}", class="btn btn-outline-success btn-sm">Edit Event</a>
+                  <a href="{% url 'eventDelete' data.id %}" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are You Sure')">Event Delete</a>
+                </td>
+              </tr>
+              
+               {% endfor %} 
+            </tbody>
+            
+          </table>
+          <div class="row" >
+            <nav aria-label="...">
+              <ul class="pagination">
+                <li class="page-item">
+                 {% if page_obj.has_previous %}
+                    <a class="page-link" href="?page={{page_obj.previous_page_number}}">Previous</a>
+                  {% endif %}
+                </li>
+                
+                <span  class="page-link"  >{{page_obj.number}}</span>
+               
+        
+                <li class="page-item">
+                  {% if page_obj.has_next %}
+                  <a class="page-link" href="?page={{page_obj.next_page_number}}">Next</a>
+                  {% endif %}
+                </li>
+              </ul>
+            </nav>
+           </div>
+        </div>
+
+
+      </div>
+    </div>
+ 
+<!-- content-wrapper ends -->
+<!-- partial:partials/_footer.html -->
+{% comment %} <footer class="footer">
+<div class="d-sm-flex justify-content-center justify-content-sm-between">
+  <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash. All rights reserved.</span>
+  <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+</div>
+</footer> {% endcomment %}
+<!-- partial -->
+ 
+  </div>
+
+
+{% endblock %}

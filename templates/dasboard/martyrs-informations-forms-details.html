@@ -1,0 +1,603 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+          {% for data in data %}
+        <h4 class="card-title">Red Army Martyrs Information Forms Recoard- {{data.full_name}} </h4>
+        {% endfor %}
+        <hr>
+        <br>
+        
+        <h6><a href="" download> Download Forms </a></h6>
+        {% for data in data %}
+        <table  class="table-dark">
+          <tr class="table-light"  >
+            <td class="table-light" style="width: 250px; height:1in; " >Image:</td>
+           <td class="table-light"><img src="{{data.image.url}}" style="height: 2in; width: 6cm;" alt="Image"></td>
+           
+           </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Causality Status</td>
+           <td class="table-light" style="width: 600px;" >{{data.causality_status}}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Cause of Death</td>
+           <td class="table-light" >{{data.cause_of_death}}</td>
+           
+          </tr>
+           
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Description Of Circumstances That Led To Death</td>
+           <td class="table-light" >{{data.led_to_death}}</td>
+           
+          </tr>
+           
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Full Name</td>
+           <td class="table-light" >{{data.full_name}}</td>
+           
+          </tr>
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Alias or Nicknames</td>
+           <td class="table-light" >{{data.alias_or_nicknames}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Relationship:</td>
+           <td class="table-light" >{{data.relationship}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Gender:</td>
+           <td class="table-light" >{{data.gender}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date of Birth:</td>
+           <td class="table-light" >{{data.date_of_birth}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date of Death</td>
+           <td class="table-light" >{{data.date_of_death}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Place of Death</td>
+           <td class="table-light" >{{data.place_of_death}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Issuing Country</td>
+           <td class="table-light" >{{data.issuing_country}}</td>
+           
+          </tr>
+           
+            
+       
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Nationality at Birth:</td>
+           <td class="table-light" >{{data.nationality_at_birth}}</td>
+           
+          </tr>
+           
+          
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Other Citizenships:</td>
+           <td class="table-light" >{{data.other_citizenships}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >State of Origin:</td>
+           <td class="table-light" >{{data.state_of_rigin}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >County of Origin:</td>
+           <td class="table-light" >{{data.county_of_origin }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Payam of Origin:</td>
+           <td class="table-light" >{{data.payam_of_origin}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Boma of Origin:</td>
+           <td class="table-light" >{{data.boma_of_origin }}</td>
+           
+          </tr>
+           
+            
+ 
+           
+            
+          
+           
+         
+           
+            
+         
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Tribe:</td>
+           <td class="table-light" >{{data.tribe}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Race:</td>
+           <td class="table-light" >{{data.race}}</td>
+           
+          </tr>
+           
+            
+   
+           
+      
+           
+            
+         
+       
+           
+            
+         
+           
+        
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Additional Information:</td>
+           <td class="table-light" >{{data.additional_information}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Camp (Markaz)</td>
+           <td class="table-light" >{{data.camp }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Division (Liwa)</td>
+           <td class="table-light" >{{data.division}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Battalion (Katiba)</td>
+           <td class="table-light" >{{data.battalion}}</td>
+           
+          </tr>
+           
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Company (Siria)/td>
+           <td class="table-light" >{{data.company}}</td>
+
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Platoon (Fasila)</td>
+           <td class="table-light" >{{data.platoon}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Squad (Jamaa)</td>
+           <td class="table-light" >{{data.squad}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Rank (Rutba)</td>
+           <td class="table-light" >{{data.rank }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Marital Status</td>
+           <td class="table-light" >{{data.causality_marital_status}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >If Married, How Many Wives?</td>
+           <td class="table-light" >{{data.how_many_wive}}</td>
+           
+          </tr>
+           
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Boys</td>
+           <td class="table-light" >{{data.boys}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Gilrs</td>
+           <td class="table-light" >{{data.girls}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Full Name</td>
+           <td class="table-light" >{{data.next_full_name}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Alias or Nicknames</td>
+           <td class="table-light" >{{data.next_alias_or_nicknames }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Nationality at Birth:</td>
+           <td class="table-light" >{{data.next_nationality_at_birth}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Relationship</td>
+           <td class="table-light" >{{data.next_relationship}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Gender</td>
+           <td class="table-light" >{{data.next_gender}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >County of Origin:</td>
+           <td class="table-light" >{{data.next_county_of_origin}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date of Birth</td>
+           <td class="table-light" >{{data.next_date_of_birth}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Place of Birth</td>
+           <td class="table-light" >{{data.next_place_of_birth}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Identification Number</td>
+           <td class="table-light" >{{data.next_identification_number}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Type of Identification</td>
+           <td class="table-light" >{{data.next_type_of_identification}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Issuing Country</td>
+           <td class="table-light" >{{data.next_issuing_country}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Nationality at Birth</td>
+           <td class="table-light" >{{data.next_nationality_at_birth}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Other Citizenships</td>
+           <td class="table-light" >{{data.next_other_citizenships }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >State of Origin</td>
+           <td class="table-light" >{{data.next_state_of_rigin}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >County of Origin</td>
+           <td class="table-light" >{{data.next_county_of_origin}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Payam of Origin</td>
+           <td class="table-light" >{{data.next_payam_of_origin}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Boma of Origin</td>
+           <td class="table-light" >{{data.next_boma_of_origin}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >State or Area of Residence</td>
+           <td class="table-light" >{{data.next_state_or_area_of_residence}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >County of Residence</td>
+           <td class="table-light" >{{data.next_county_of_residence}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Payam of Residence</td>
+           <td class="table-light" >{{data.next_payam_of_residence}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Boma of Residence</td>
+           <td class="table-light" >{{data.next_boma_of_residence}}</td>
+           
+          </tr>
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Tribe</td>
+           <td class="table-light" >{{data.next_tribe}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Race</td>
+           <td class="table-light" >{{data.next_race }}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Religion</td>
+           <td class="table-light" >{{data.next_religion }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Physical Address</td>
+           <td class="table-light" >{{data.next_physical_address }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Race</td>
+           <td class="table-light" >{{data.next_race }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Mailing Address</td>
+           <td class="table-light" >{{data.next_mailing_address }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Telephone Numbers</td>
+           <td class="table-light" >{{data.next_telephone_numbers }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light"> Email Addresses</td>
+           <td class="table-light" >{{data.next_email_address }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >WhatsApp Number</td>
+           <td class="table-light" >{{data.next_whatsApp_number }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Race</td>
+           <td class="table-light" >{{data.next_race }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Social Media Handles</td>
+           <td class="table-light" >{{data.next_social_media_handles }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Other Contacts</td>
+           <td class="table-light" >{{data.next_other_contact_number }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Additional Information</td>
+           <td class="table-light" >{{data.next_additional_information }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Full  Name</td>
+           <td class="table-light" >{{data.person_full_name }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Alias or Nicknames</td>
+           <td class="table-light" >{{data.person_alias_or_nicknames }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Relationship</td>
+           <td class="table-light" >{{data.person_relationship }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Gender</td>
+           <td class="table-light" >{{data.person_gender }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date of Birth</td>
+           <td class="table-light" >{{data.person_date_of_birth }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Place of Birth</td>
+           <td class="table-light" >{{data.person_place_of_birth }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Identification Number</td>
+           <td class="table-light" >{{data.person_identification_number }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Type of Identification</td>
+           <td class="table-light" >{{data.person_type_of_identification }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Issuing Country</td>
+           <td class="table-light" >{{data.person_issuing_country }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Nationality at Birth</td>
+           <td class="table-light" >{{data.person_nationality_at_birth }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Other Citizenships</td>
+           <td class="table-light" >{{data.person_other_citizenships }}</td>
+           
+          </tr>
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >State of Origin</td>
+           <td class="table-light" >{{data.person_state_of_rigin }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >County of Origin</td>
+           <td class="table-light" >{{data.person_county_of_origin }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Payam of Origin</td>
+           <td class="table-light" >{{data.person_payam_of_origin }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Boma of Origin</td>
+           <td class="table-light" >{{data.person_boma_of_origin }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >State or Area of Residence</td>
+           <td class="table-light" >{{data.person_state_or_area_of_residence }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >County of Residence</td>
+           <td class="table-light" >{{data.person_county_of_residence }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Payam of Residence</td>
+           <td class="table-light" >{{data.person_payam_of_residence }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Boma of Residence</td>
+           <td class="table-light" >{{data.person_boma_of_residence }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Tribe</td>
+           <td class="table-light" >{{data.person_tribe }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Race</td>
+           <td class="table-light" >{{data.next_race }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Religion</td>
+           <td class="table-light" >{{data.person_religion }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Physical Address</td>
+           <td class="table-light" >{{data.person_physical_address }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Mailing Address</td>
+           <td class="table-light" >{{data.person_mailing_address }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Telephone Numbers</td>
+           <td class="table-light" >{{data.person_telephone_numbers }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Email Addresses</td>
+           <td class="table-light" >{{data.person_email_address }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >WhatsApp Number</td>
+           <td class="table-light" >{{data.person_whatsApp_number }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Social Media Handles</td>
+           <td class="table-light" >{{data.person_social_media_handles }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Other Contacts</td>
+           <td class="table-light" >{{data.person_other_contact_number }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Additional Information</td>
+           <td class="table-light" >{{data.person_additional_information }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Rank Or Medal</td>
+           <td class="table-light" >{{data.rank_or_medal }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Provided Details Of Such Heroic Act Or Service</td>
+           <td class="table-light" >{{data.heroic_act_or_service }}</td>
+           
+          </tr>
+        
+
+       
+        </table>
+        
+        {% endfor %}
+         
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

@@ -1,0 +1,402 @@
+{% extends 'dasboard/index.html' %}
+
+{% block content %}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+          {% for data in data %}
+        <h4 class="card-title">Ssdpf Commendations Information Forms Recoard- {{data.full_name}} </h4>
+        {% endfor %}
+        <hr>
+        <br>
+        <h6><a href="" download> Download Forms </a></h6>
+        
+        {% for data in data %}
+        <table  class="table-dark">
+          <tr class="table-light"  >
+            <td class="table-light" style="width: 250px; height:1in; " >Image:</td>
+           <td class="table-light"><img src="image" alt="Image"></td>
+           
+           </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Camp (Markaz)</td>
+           <td class="table-light" style="width: 600px;" >{{data.camp}}</td>
+           
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Division(Liwa)</td>
+           <td class="table-light" >{{data.division}}</td>
+           
+          </tr>
+           
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Battalion (Katiba)</td>
+           <td class="table-light" >{{data.battalion}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Company (Siria)</td>
+           <td class="table-light" >{{data.company}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Platoon (Fasila)</td>
+           <td class="table-light" >{{data.platoon}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Squad (Jamaa)</td>
+           <td class="table-light" >{{data.squad}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Conscription Year</td>
+           <td class="table-light" >{{data.conscription_year}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Current Rank (Rutba)</td>
+           <td class="table-light" >{{data.current_rank}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Ever Engaged On The Battlefield</td>
+           <td class="table-light" >{{data.ever_engaged}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >rovide Names Of Your Living Overall And Line Commanders With You During Those Offensives</td>
+           <td class="table-light" >{{data.military_operations}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >You Did Not Engage In Any Battle </td>
+           <td class="table-light" >{{data.any_battle}}</td>
+           
+          </tr>
+           
+            
+        
+          
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Cuba Or Lost Boys And Girls Program Or Other Assignments, </td>
+           <td class="table-light" >{{data.special_misssion}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Special Operations, Or Foreign Missions You Joined</td>
+           <td class="table-light" >{{data.original_military}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >pecial Operations Or Foreign Missions</td>
+           <td class="table-light" >{{data.special_operations }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Civil Administration Of The New Sudan (Cans)</td>
+           <td class="table-light" >{{data.civil_administratio}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >our job titles and locations you worked</td>
+           <td class="table-light" >{{data.job_titles_and_locations }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >You Performed That Deserves Recognition With Rank Or Medal</td>
+           <td class="table-light" >{{data.rank_or_medal}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Provided Details Of Such Heroic Act Or Service</td>
+           <td class="table-light" >{{data.heroic_act_or_service}}</td>
+           
+          </tr>
+           
+            
+          
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >South Sudan People’s Defence Forces</td>
+           <td class="table-light" >{{data.defence_forces}}</td>
+          
+           
+          </tr>
+           
+          <tr>
+            <td class="table-light">Branch or Unit</td>
+            <td >{{data.current_duty_station}}</td>
+          </tr>
+              
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >South Sudan National Police Service</td>
+           <td class="table-light" >{{data.police_services}}</td>
+           
+           
+          </tr>
+          <tr>
+            <td class="table-light">Branch or Unit</td>
+           <td class="table-light">{{data.national_police_service}}</td>
+          </tr>  
+
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >South Sudan National Wildlife Service</td>
+           <td class="table-light" >{{data.wildlife_service}}</td>
+           
+           
+          </tr>
+          <tr>
+            <td class="table-light">Branch or Unit</td>
+            <td class="table-light">{{data.national_wildlife_service}}</td>
+          </tr>
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >National Prison Service Of South Sudan</td>
+           <td class="table-light" >{{data.prison_service}}</td>
+           
+           
+          </tr>
+          <tr>
+            <td class="table-light" >Branch or Unit</td>
+           <td class="table-light">{{data.national_prison_service}}</td>
+          </tr>
+              
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > South Sudan National Civil Defence Service</td>
+           <td class="table-light" >{{data.civil_service}}</td>
+           
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;">
+            <td class="table-light"   style="width: 250px;" >Branch or Unit</td>
+           <td class="table-light" >{{data.civil_defence_service}}</td>
+          </tr>    
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > South Sudan National Security Service</td>
+           <td class="table-light" >{{data.security_service}}</td>
+          
+          </tr>
+            <tr class="table-light" style="width: 250px;">
+              <td class="table-light" >Branch or Unit</td>
+              <td class="table-light" >{{data.national_security_service}}</td>
+              
+            </tr>
+            <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Your Current Rank</td>
+           <td class="table-light" >{{data.current_rank}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Any Assignments</td>
+           <td class="table-light" >{{data.any_assignments}}</td>
+           
+          </tr>
+           
+            
+   
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Your Current Assignment</td>
+           <td class="table-light" >{{data.current_assignment}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >uperior About You Getting An Assignment</td>
+           <td class="table-light" >{{data.getting_an_assignment}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Rank Adjustment</td>
+           <td class="table-light" >{{data.rank_adjustment}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >The Nature Of Your Complaint And The Kind Of Assistance </td>
+           <td class="table-light" >{{data.kind_of_assistance}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >That Deserves Recognition With Rank Or Medal</td>
+           <td class="table-light" >{{data.recognition_rank_or_medal}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Provided Details Of Such Heroic Act Or Service</td>
+           <td class="table-light" >{{data.such_heroic_act_or_service}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Full Name</td>
+           <td class="table-light" >{{data.full_name}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date</td>
+           <td class="table-light" >{{data.date}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Location</td>
+           <td class="table-light" >{{data.location}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Membership Determination</td>            </td>
+           <td class="table-light" >{{data.membership_determination }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > If Rejected, Provided Reasons For Rejection</td>
+           <td class="table-light" >{{data.reasons_for_rejection}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Membership Number</td>
+           <td class="table-light" >{{data.membership_number}}</td>
+           
+          </tr>
+           
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" > Membership Classification</td>
+           <td class="table-light" >{{data.membership_classification}}</td>
+
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Membership Registration Fee Paid</td>
+           <td class="table-light" >{{data.registration_fee_paid}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Annual Subscription Dues Paid</td>
+           <td class="table-light" >{{data.subscription_dues_paid}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Any Contribution</td>
+           <td class="table-light" >{{data.any_contribution }}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Any Donation</td>
+           <td class="table-light" >{{data.any_donation}}</td>
+           
+          </tr>
+           
+            
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Official Waiver</td>
+           <td class="table-light" >{{data.official_waiver}}</td>
+           
+          </tr>
+           
+          
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Notes</td>
+           <td class="table-light" >{{data.notes}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date of Application</td>
+           <td class="table-light" >{{data.date_of_application}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date of Certification</td>
+           <td class="table-light" >{{data.date_of_certification }}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Full Name</td>
+           <td class="table-light" >{{data.membership_full_name}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Date</td>
+           <td class="table-light" >{{data.membership_date}}</td>
+           
+          </tr>
+          <tr class="table-light" style="width: 250px;" >
+            <td class="table-light" >Location</td>
+           <td class="table-light" >{{data.membership_member_location}}</td>
+           
+          </tr>
+          
+       
+        </table>
+        
+        {% endfor %}
+         
+
+
+      </div>
+    </div>
+ 
+
+
+{% endblock %}

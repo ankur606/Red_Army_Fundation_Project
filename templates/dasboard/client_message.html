@@ -1,0 +1,78 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+  <title>{% block title %} Client Messages {% endblock title %} </title>
+      {% block content %}
+      <div class="col-lg-11 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Client Messages</h4>
+                  <p class="card-description">
+                   
+                  </p>
+                  <div class="table-responsive">
+                  {% for message in messages %}
+                <b style="color:#03e9f4" >{{message}}</b>
+                {% endfor %} <br>
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>
+                           Sr No
+                          </th>
+                          <th>
+                            Name
+                          </th>
+                          <th>
+                            Email
+                          </th>
+                          <th>
+                            Subject
+                          </th>
+                          <th>
+                            Message
+                          </th>
+                          <th>
+                            Date
+                          </th>
+                          <th>
+                            Action
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for all in all %}
+                        <tr>
+                        <td>
+                          {{forloop.counter}}
+                            
+                          </td>
+                          <td>
+                            {{all.name}}
+                          </td>
+                       <td>
+                            {{all.email}}
+                          </td>
+                          <td>
+                            {{all.subjact}}
+                          </td>
+                          <td>
+                            {{all.messege}}
+                          </td>
+                         <td>
+                          {{all.date}}
+                          </td>
+                          <td>    
+                            <a href="delete-message/{{all.id}}" class="btn btn-outline-danger btn-sm" onclick="return confirm('Are You Sure')">Delete</a>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+       {% endblock content %}
+
+      
